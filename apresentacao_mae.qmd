@@ -1,0 +1,51 @@
+---
+title: "Importância de Variáveis"
+subtitle: "Redes Neurais"
+author: 
+  - Carolina Musso
+  - Rafael Rocha
+  - Vitor Borges
+  - Stefan 
+
+format:
+  revealjs:
+    incremental: true 
+    theme: dark
+    code-block-border-left: "#31BAE9"
+    code-block-bg: "#011627"
+    code-overflow: wrap
+    highlight-style: dracula
+    transition: fade
+    self-contained: true
+knitr:
+  opts_chunk:
+    echo: true
+    warnings: false
+editor: visual
+---
+
+{{< include capitulos/Introducao/introducao.qmd >}}
+
+{{< include capitulos/Carol/Geral.qmd >}}
+
+{{< include capitulos/Vitor/shap.qmd >}}
+
+{{< include capitulos/Stefan/lime.qmd >}}
+
+{{< include capitulos/Rafa/Inferencia.qmd >}}
+
+{{< include capitulos/Conclusao/conclusao.qmd >}}
+
+
+
+</section>
+
+<section>
+
+<h1 style="text-align: center">
+
+Obrigada!!!
+
+</h1>
+
+</section>

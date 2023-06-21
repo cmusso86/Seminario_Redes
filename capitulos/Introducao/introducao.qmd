@@ -1,0 +1,9 @@
+---
+title: "Importância de Variáveis"
+---
+
+# Introdução
+
+```{r}
+library(tidyverse)
+```
