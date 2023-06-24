@@ -6,11 +6,11 @@ title: "Importância de Variáveis"
 
 ## Motivation
 
-::: {style="text-align: center; margin-top: 1.75em; font-size: 1.2em"}
+::: {style="text-align: center; margin-top: 1.5em; font-size: 1.3em"}
 ::: incremental
--   Given a patient who returned from Africa with a fever and body aches, the most likely explanation was [malaria{style="color:green"}]
--   But AI got mired in probabilistic associations
--   The key, [Judea Pearl] argues, is to replace reasoning by association with causal reasoning
+-   Given a patient who returned from Africa with a fever and body aches, the most likely explanation was malaria
+-   But AI got mired in [probabilistic associations]{style="color:Violet"}
+-   The key, [Judea Pearl] argues, is to replace reasoning by association with [causal reasoning]{style="color:MediumSeaGreen"}
 :::
 :::
  
@@ -23,8 +23,8 @@ title: "Importância de Variáveis"
 ::: {.nonincremental}
 - Instead of the mere ability to correlate fever and malaria, machines [need the capacity to reason that malaria causes fever]{style="color:red"}. 
 - Then, it becomes possible for machines to ask counterfactual questions 
-  - to inquire how the causal relationships would change given some kind of intervention
-- Pearl views as the cornerstone of scientific thought. 
+  - How the causal relationships would change given some kind of intervention?
+- Pearl views it as the cornerstone of scientific thought. 
 :::
 
 ::: footer
@@ -34,8 +34,25 @@ title: "Importância de Variáveis"
 ## Causal Inference 
 
 
-::: {.nonincremental}
-- Pearl also proposes a formal language in which to make this kind of thinking possible 
-- According him, it is a 21st-century version of the Bayesian framework that allowed machines to think probabilistically.
+::: {.incremental}
+- Mathematics has not developed the asymmetric language required to capture our understanding that if $X$ causes $Y$ that [does not mean]{style="color:red"} that $Y$ causes $X$^["It sounds like a terrible thing to say against science, I know. If I were to say it to my mother, she’d slap me."]
+- Pearl proposes a formal language in which to make this kind of thinking possible 
+- According him, it is a 21st-century version of the Bayesian framework that allowed machines to [think probabilistically]{style="color:Violet"}
 :::
 
+::: footer
+[To Build Truly Intelligent Machines, Teach Them Cause and Effect](https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515/), *Judea Pearl* interview.
+:::
+
+## Pearl's Criticism on Deep Learning 
+
+
+::: {.nonincremental}
+- He did not expect that so many problems could be solved by [pure curve fitting]{style="color:red"}.^["If you deprive the robot of your intuition about cause and effect, you’re never going to communicate meaningfully. Robots could not say 'I should have done better'."] 
+- "But what next?"
+    - "Can you have a [robot scientist]{style="color:Violet"} that would plan an experiment and find new answers to pending scientific questions? That’s the next step."
+:::
+
+::: footer
+[To Build Truly Intelligent Machines, Teach Them Cause and Effect](https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515/), *Judea Pearl* interview.
+:::
