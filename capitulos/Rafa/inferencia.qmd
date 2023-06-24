@@ -56,3 +56,41 @@ title: "Importância de Variáveis"
 ::: footer
 [To Build Truly Intelligent Machines, Teach Them Cause and Effect](https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515/), *Judea Pearl* interview.
 :::
+
+
+## Ladder of Causation {auto-animate="true"}
+
+![](capitulos/Rafa/seeing.png){width="550" height="475"}
+
+
+::: footer
+Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and Effect.* Basic Books, 2018.
+:::
+
+## Ladder of Causation {auto-animate="true"}
+
+![](capitulos/Rafa/doing.png){width="550" height="475"}
+
+::: footer
+Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and Effect.* Basic Books, 2018.
+:::
+
+## Ladder of Causation {auto-animate="true"}
+
+![](capitulos/Rafa/imagining.png){width="750" height="475"}
+
+::: footer
+Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and Effect.* Basic Books, 2018.
+:::
+
+## Ladder of Causation {auto-animate="true"}
+
+![](capitulos/Rafa/causal-ladder.png){.absolute width="550" top=0 height="675" left="600"}
+
+::: footer
+Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and Effect.* Basic Books, 2018.
+:::
+
+## Aplications of Causal Inference in Deep Neural Nets
+
+
