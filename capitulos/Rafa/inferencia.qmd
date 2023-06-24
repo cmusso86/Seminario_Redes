@@ -4,6 +4,38 @@ title: "Importância de Variáveis"
 
 # Inferência Causal
 
-## Inteligent Machines and Causal REasoning
+## Motivation
 
-In his new book, Pearl, now 81, elaborates a vision for how truly intelligent machines would think. The key, he argues, is to replace reasoning by association with causal reasoning. Instead of the mere ability to correlate fever and malaria, machines need the capacity to reason that malaria causes fever. Once this kind of causal framework is in place, it becomes possible for machines to ask counterfactual questions — to inquire how the causal relationships would change given some kind of intervention — which Pearl views as the cornerstone of scientific thought. Pearl also proposes a formal language in which to make this kind of thinking possible — a 21st-century version of the Bayesian framework that allowed machines to think probabilistically.
+::: {style="text-align: center; margin-top: 1.75em; font-size: 1.2em"}
+::: incremental
+-   Given a patient who returned from Africa with a fever and body aches, the most likely explanation was [malaria{style="color:green"}]
+-   But AI got mired in probabilistic associations
+-   The key, [Judea Pearl] argues, is to replace reasoning by association with causal reasoning
+:::
+:::
+ 
+::: footer
+[To Build Truly Intelligent Machines, Teach Them Cause and Effect](https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515/), *Judea Pearl* interview.
+:::
+
+## Inteligent Machines and Causal Reasoning
+
+::: {.nonincremental}
+- Instead of the mere ability to correlate fever and malaria, machines [need the capacity to reason that malaria causes fever]{style="color:red"}. 
+- Then, it becomes possible for machines to ask counterfactual questions 
+  - to inquire how the causal relationships would change given some kind of intervention
+- Pearl views as the cornerstone of scientific thought. 
+:::
+
+::: footer
+[To Build Truly Intelligent Machines, Teach Them Cause and Effect](https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515/), *Judea Pearl* interview.
+:::
+
+## Causal Inference 
+
+
+::: {.nonincremental}
+- Pearl also proposes a formal language in which to make this kind of thinking possible 
+- According him, it is a 21st-century version of the Bayesian framework that allowed machines to think probabilistically.
+:::
+
