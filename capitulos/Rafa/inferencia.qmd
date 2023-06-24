@@ -3,3 +3,7 @@ title: "Importância de Variáveis"
 ---
 
 # Inferência Causal
+
+## Inteligent Machines and Causal REasoning
+
+In his new book, Pearl, now 81, elaborates a vision for how truly intelligent machines would think. The key, he argues, is to replace reasoning by association with causal reasoning. Instead of the mere ability to correlate fever and malaria, machines need the capacity to reason that malaria causes fever. Once this kind of causal framework is in place, it becomes possible for machines to ask counterfactual questions — to inquire how the causal relationships would change given some kind of intervention — which Pearl views as the cornerstone of scientific thought. Pearl also proposes a formal language in which to make this kind of thinking possible — a 21st-century version of the Bayesian framework that allowed machines to think probabilistically.
