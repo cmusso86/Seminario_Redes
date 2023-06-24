@@ -32,7 +32,7 @@ editor: visual
 
 {{< include capitulos/Stefan/lime.qmd >}}
 
-{{< include capitulos/Rafa/Inferencia.qmd >}}
+{{< include capitulos/Rafa/inferencia.qmd >}}
 
 {{< include capitulos/Conclusao/conclusao.qmd >}}
 
