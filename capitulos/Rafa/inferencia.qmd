@@ -99,7 +99,7 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 ::: {.incremental}
 1. The requirements and processes which are essential for a [causality-related data]{style="color:Violet"} mining phase;
 2. A suitable selection of features to enable a best possible forecast of supply disruptions; and
-3. [effective combination]{style="color:Violet"} of the DNN and causal inference theory.
+3. [effective combination]{style="color:Violet"} of the DNN and causal inference theory by evaluating propensity scores.
 :::
  
 
@@ -111,4 +111,31 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 ---
 
 ![](capitulos/Rafa/framework.png){.absolute width="1400" top=0 height="800" left="0"}
+
+
+## Usefulness of CI and DNN in Supply disruptions
+
+::: {.nonincremental}
+- [Shedding light into black-box]{style="color:MediumSeaGreen"} DNN models by calculating propensity scores and estimating treatment effects
+- Identifying [causal relationships]{style="color:MediumSeaGreen"} between supplier characteristics and the expected delivery performance 
+- Discovering lacking supplier relationships and consequently bundling supply chain risk management-related activities
+:::
+ 
+
+::: footer
+[Frank Bodendorf, Maximilian Sauter, Jörg Franke](https://www.sciencedirect.com/science/article/abs/pii/S0925527322002900?via%3Dihub).
+*A mixed methods approach to analyze and predict supply disruptions by combining causal inference and deep learning*. 2023. International Journal of Production Economics, Volume 256.
+:::
+
+
+---
+
+![](capitulos/Rafa/graph.png){.absolute width="1400" top=0 height="800" left="0"}
+
+## Examples of conclusions
+
+::: {.nonincremental}
+- [Country]{style="color:MediumSeaGreen"}: comparing suppliers based on their origin, the strong performance of foreign suppliers is apparent. Overall, deliveries by domestic suppliers are affected by an average reliability [decrease of 39.7%]{style="color:red"}.
+- [Product Group]{style="color:MediumSeaGreen"}: raw material suppliers show a superior delivery performance ([increase of 55.2%]{style="color:red"}) in comparison to vendors offering operating supplies, measurement equipment, and spare parts.
+:::
 
