@@ -93,19 +93,44 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 
 # CI and DNN Aplications
 
+## Summary of examples
+
+::: {.nonincremental}
+- Counterfactual explanations
+- Causal Discovery in the hidden layer of a DNN (CNN)
+- Deep Causal Learning
+- Supply disruptions
+:::
+
+
+## Counterfactual
+
+
+::: footer
+[Christoph Molnar](https://christophm.github.io/interpretable-ml-book/). *Interpretable Machine Learning*, 2023.
+:::
+
+
+---
+
+![](capitulos/Rafa/deep-causal-learning.png){.absolute width="1200" top=0 height="650" left="0"}
+
+::: footer
+Deep Causal Learning example. Real model: 𝐸(𝑋3|𝑑𝑜(𝑋2 = 𝑥)) = −1.1𝑥 + 84. Source: [Zizhen Deng, Xiaolong Zheng, Hu Tian, Daniel Dajun Zeng](http://arxiv.org/abs/2211.03374). *Deep Causal Learning: Representation, Discovery and Inference*, 2022.
+:::
+
 
 ## Steps for CI and DNN in Supply disruptions
 
 ::: {.incremental}
 1. The requirements and processes which are essential for a [causality-related data]{style="color:Violet"} mining phase;
 2. A suitable selection of features to enable a best possible forecast of supply disruptions; and
-3. [effective combination]{style="color:Violet"} of the DNN and causal inference theory by evaluating propensity scores.
+3. [Effective combination]{style="color:Violet"} of the DNN and causal inference theory by evaluating propensity scores^["propensity score methods are used for removing the effects of confounding when estimating the effects of treatment on outcomes:". See more in [Peter C. Austin's 2011 paper](https://doi.org/10.1080/00273171.2011.568786).].
 :::
  
 
 ::: footer
-[Frank Bodendorf, Maximilian Sauter, Jörg Franke](https://www.sciencedirect.com/science/article/abs/pii/S0925527322002900?via%3Dihub).
-*A mixed methods approach to analyze and predict supply disruptions by combining causal inference and deep learning*. 2023. International Journal of Production Economics, Volume 256.
+Source: [Bodendorf, Sauter, and Franke](https://www.sciencedirect.com/science/article/abs/pii/S0925527322002900?via%3Dihub), 2023. 
 :::
 
 ---
@@ -138,4 +163,7 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 - [Country]{style="color:MediumSeaGreen"}: comparing suppliers based on their origin, the strong performance of foreign suppliers is apparent. Overall, deliveries by domestic suppliers are affected by an average reliability [decrease of 39.7%]{style="color:red"}.
 - [Product Group]{style="color:MediumSeaGreen"}: raw material suppliers show a superior delivery performance ([increase of 55.2%]{style="color:red"}) in comparison to vendors offering operating supplies, measurement equipment, and spare parts.
 :::
+
+
+
 
