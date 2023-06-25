@@ -85,12 +85,30 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 
 ## Ladder of Causation {auto-animate="true"}
 
-![](capitulos/Rafa/causal-ladder.png){.absolute width="550" top=0 height="675" left="600"}
+![](capitulos/Rafa/causal-ladder.png){.absolute width="600" top=0 height="675" left="600"}
 
 ::: footer
 Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and Effect.* Basic Books, 2018.
 :::
 
-## Aplications of Causal Inference in Deep Neural Nets
+# CI and DNN Aplications
 
+
+## Steps for CI and DNN in Supply disruptions
+
+::: {.incremental}
+1. The requirements and processes which are essential for a [causality-related data]{style="color:Violet"} mining phase;
+2. A suitable selection of features to enable a best possible forecast of supply disruptions; and
+3. [effective combination]{style="color:Violet"} of the DNN and causal inference theory.
+:::
+ 
+
+::: footer
+[Frank Bodendorf, Maximilian Sauter, Jörg Franke](https://www.sciencedirect.com/science/article/abs/pii/S0925527322002900?via%3Dihub).
+*A mixed methods approach to analyze and predict supply disruptions by combining causal inference and deep learning*. 2023. International Journal of Production Economics, Volume 256.
+:::
+
+---
+
+![](capitulos/Rafa/framework.png){.absolute width="1400" top=0 height="800" left="0"}
 
