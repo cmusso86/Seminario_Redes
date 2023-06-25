@@ -2,6 +2,23 @@
 title: "Importância de Variáveis"
 ---
 
+<style>
+  /* Increase the font size of all text in the presentation */
+  body {
+    font-size: 36px;
+  }
+  
+  /* Increase the font size of all headings in the presentation */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 36px;
+  }
+  
+  /* Increase the font size of all text in a specific slide */
+  .my-slide {
+    font-size: 64px;
+  }
+</style>
+
 # Inferência Causal
 
 ## Motivation
@@ -93,7 +110,8 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 
 # CI and DNN Aplications
 
-## Summary of examples
+
+## Summary of examples {.my-slide}
 
 ::: {.nonincremental}
 - Counterfactual explanations
@@ -103,7 +121,52 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 :::
 
 
+
+
+
 ## Counterfactual
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.nonincremental}
+- The “event” is the predicted outcome of an instance
+- The “causes” are the [particular feature values]{style="color:Violet"} of this instance that were input to the model and “caused” a certain prediction.
+:::
+
+:::
+
+::: {.column width="50%"}
+![](capitulos/Rafa/counterfactual.png){width="600" height="500"}
+:::
+
+::::
+
+
+
+
+
+::: footer
+[Christoph Molnar](https://christophm.github.io/interpretable-ml-book/). *Interpretable Machine Learning*, 2023.
+:::
+
+## Counterfactual example
+
+A counterfactual explanation of a prediction describes the [smallest change to the feature]{style="color:MediumSeaGreen"} values that changes the prediction to a [predefined output]{style="color:red"}.
+
+![](capitulos/Rafa/ctrfac-feature.png){width="1400" height="250"}
+
+How get a predicted Good credit risk with probability larger than 50% (against 24.2%)?
+
+::: footer
+[Christoph Molnar](https://christophm.github.io/interpretable-ml-book/). *Interpretable Machine Learning*, 2023.
+:::
+
+
+## Counterfactual example
+
+
+![](capitulos/Rafa/ctrfac-results.png){width="1400" height="550"}
 
 
 ::: footer
@@ -111,9 +174,9 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 :::
 
 
----
+## Deep causal learning
 
-![](capitulos/Rafa/deep-causal-learning.png){.absolute width="1200" top=0 height="650" left="0"}
+![](capitulos/Rafa/deep-causal-learning.png){.absolute width="1000" top=50 height="600" left="0"}
 
 ::: footer
 Deep Causal Learning example. Real model: 𝐸(𝑋3|𝑑𝑜(𝑋2 = 𝑥)) = −1.1𝑥 + 84. Source: [Zizhen Deng, Xiaolong Zheng, Hu Tian, Daniel Dajun Zeng](http://arxiv.org/abs/2211.03374). *Deep Causal Learning: Representation, Discovery and Inference*, 2022.
