@@ -268,6 +268,16 @@ The three core strengths of deep learning for casual learning are:
 ## Deep causal learning
 
 
+![](capitulos/Rafa/ci-fundamental-problems.png){.absolute width="1000" top=50 height="600" left="0"}
+
+::: footer
+Figure 8. Source: [Zizhen Deng, Xiaolong Zheng, Hu Tian, Daniel Dajun Zeng](http://arxiv.org/abs/2211.03374). *Deep Causal Learning: Representation, Discovery and Inference*, 2022.
+:::
+
+
+## Deep causal learning
+
+
 ![](capitulos/Rafa/deep-causal-learning.png){.absolute width="1000" top=50 height="600" left="0"}
 
 ::: footer
