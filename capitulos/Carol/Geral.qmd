@@ -2,4 +2,143 @@
 title: "Importância de Variáveis"
 ---
 
-# Tecnicas para avaliar importância de variáveis
+## Introduction: Interpretability
+
+- is the degree to which a human can understand the cause of a decision. 
+- Interpretability is the degree to which a human can consistently predict the model’s result 4
+
+- Interpretable machine learning is a useful umbrella term that captures the “extraction of relevant knowledge from a machine-learning model concerning relationships either contained in data or learned by the model”. 
+
+
+# Interpretability in ANN
+
+
+## model-agnostic 
+
+- Model flexibility: The interpretation method can work with any machine learning model, such as random forests and deep neural networks.
+- Explanation flexibility: You are not limited to a certain form of explanation. In some cases it might be useful to have a linear formula, in other cases a graphic with feature importances.
+Representation flexibility: The explanation system should be able to use a different feature representation as the model being explained. For a text classifier that uses abstract word embedding vectors, it might be preferable to use the presence of individual words for the 
+
+- Imagem 
+
+Above the Black Box Model layer is the Interpretability Methods layer, which helps us deal with the opacity of machine learning models. What were the most important features for a particular diagnosis? Why was a financial transaction classified as fraud?
+
+
+## Tecnicas classicas Variable importance
+
+1 - step wise 
+2 - foward
+3 - reducao dimencionalidade
+
+- pegar informacoes dos links 
+
+## Abordaem 
+
+- ja usar modelos interpretaveis do inicio
+
+figura livro de camapda de interpretacao
+
+## Outras tecnicas
+
+- Agnosticos do modelo
+  - Local
+  - Global
+- Exempla-based
+- Esoeficico de redes neurais
+
+## Exemple based 
+
+The difference to model-agnostic methods is that the example-based methods explain a model by selecting instances of the dataset and not by creating summaries of features (such as feature importance or partial dependence)
+
+ Listing all feature values to describe an instance is usually not useful. It works well if there are only a handful of features or if we have a way to summarize an instance.
+
+- Counterfactual explanations tell us how an instance has to change to significantly change its prediction. By creating counterfactual instances, we learn about how the model makes its predictions and can explain individual predictions.
+Adversarial examples are counterfactuals used to fool machine learning models. The emphasis is on flipping the prediction and not explaining it.
+Prototypes are a selection of representative instances from the data and criticisms are instances that are not well represented by those prototypes. 29
+Influential instances are the training data points that were the most influential for the parameters of a prediction model or the predictions themselves. Identifying and analysing influential instances helps to find problems with the data, debug the model and understand the model’s behavior better.
+k-nearest neighbors model: An (interpretable) machine learning model based on examples.
+
+
+
+
+## Agnosticos do Modelo
+Global Model-Agnostic Methods
+. Since global interpretation methods describe average behavior, they are particularly useful when the modeler wants to understand the general mechanisms in the data or debug a model.
+
+
+The partial dependence plot is a feature effect method.
+Accumulated local effect plots is another feature effect method that works when features are dependent.
+Feature interaction (H-statistic) quantifies to what extent the prediction is the result of joint effects of the features.
+Functional decomposition is a central idea of interpretability and a technique that decomposes the complex prediction function into smaller parts.
+Permutation feature importance measures the importance of a feature as an increase in loss when the feature is permuted.
+Global surrogate models replaces the original model with a simpler model for interpretation.
+Prototypes and criticisms are representative data point of a distribution and can be used to enhance interpretability.
+
+
+The partial function tells us for given value(s) of features S what the average marginal effect on the prediction is. In this formula,  
+x
+(
+i
+)
+C
+  are actual feature values from the dataset for the features in which we are not interested, and n is the number of instances in the dataset. An assumption of the PDP is that the features in C are not correlated with the features in S. If this assumption is violated, the averages calculated for the partial dependence plot will include data points that are very unlikely or even impossible (see disadvantages).
+
+For classification where the machine learning model outputs probabilities, the partial dependence plot displays the probability for a certain class given different values for feature(s) in S. An easy way to deal with multiple classes is to draw one line or plot per class.
+
+The partial dependence plot is a global method: The method considers all instances and gives a statement about the global relationship of a feature with the predicted outcome.
+
+If features of a machine learning model are correlated, the partial dependence plot cannot be trusted. 
+
+# ALE
+
+M-Plots avoid averaging predictions of unlikely data instances, but they mix the effect of a feature with the effects of all correlated features. ALE plots solve this problem by calculating – also based on the conditional distribution of the features – differences in predictions instead of averages
+
+If features of a machine learning model are correlated, the partial dependence plot cannot be trusted. The computation of a partial dependence plot for a feature that is strongly correlated with other features involves averaging predictions of artificial data instances that are unlikely in reality. This can greatly bias the estimated feature effect. 
+
+M-Plots avoid averaging predictions of unlikely data instances, but they mix the effect of a feature with the effects of all correlated features. ALE plots solve this problem by calculating – also based on the conditional distribution of the features – differences in predictions instead of averages.
+
+This gives us the pure effect of the living area and is not mixing the effect with the effects of correlated features. The use of differences blocks the effect of other features. The following graphic provides intuition how ALE plots are calculated.
+# locais
+
+
+## FEATURE INTERACTION
+
+When features interact with each other in a prediction model, the prediction cannot be expressed as the sum of the feature effects, because the effect of one feature depends on the value of the other feature. Aristotle’s predicate “The whole is greater than the sum of its parts” applies in the presence of interactions.
+
+8.3.1 Feature Interaction?
+
+If a machine learning model makes a prediction based on two features, we can decompose the prediction into four terms: a constant term, a term for the first feature, a term for the second feature and a term for the interaction between the two features.
+The interaction between two features is the change in the prediction that occurs by varying the features after considering the individual feature effects.
+
+For example, a model predicts the value of a house, using house size (big or small) and location (good or bad) as features, which yields four possible predictions:
+
+## 8.5 Permutation Feature Importance
+
+Permutation feature importance measures the increase in the prediction error of the model after we permuted the feature’s values, which breaks the relationship between the feature and the true outcome.
+
+8.5.1 Theory
+
+The concept is really straightforward: We measure the importance of a feature by calculating the increase in the model’s prediction error after permuting the feature. A feature is “important” if shuffling its values increases the model error, because in this case the model relied on the feature for the prediction. A feature is “unimportant” if shuffling its values leaves the model error unchanged, because in this case the model ignored the feature for the prediction. The permutation feature importance measurement was introduced by Breiman (2001)43 for random forests. Based on this idea, Fisher, Rudin, and Dominici (2018)44 proposed a model-agnostic version of the feature importance and called it model reliance. They also introduced more advanced ideas about feature importance, for example a (model-specific) version that takes into account that many prediction models may predict the data well. Their paper is worth reading
+
+- Global
+
+## Feature Interaction
+
+
+.7 Prototypes and Criticisms
+
+A prototype is a data instance that is representative of all the data. A criticism is a data instance that is not well represented by the set of prototypes. The purpose of criticisms is to provide insights together with prototypes, especially for data points which the prototypes do not represent well. Prototypes and criticisms can be used independently from a machine learning model to describe the data, but they can also be used to create an interpretable model or to make a black box model interpretable.
+
+In this chapter I use the expression “data point” to refer to a single instance, to emphasize the interpretation that an instance is also a point in a coordinate system where each feature is a dimension. The following figure shows a simulated data distribution, with some of the instances chosen as prototypes and some as criticisms. The small points are the data, the large points the criticisms and the large squares the prototypes. The prototypes are selected (manually) to cover the centers of the data distribution and the criticisms are points in a cluster without a prototype. Prototypes and criticisms are always actual instances from the data.
+
+## Neural Networks
+
+e can certainly use model-agnostic methods, such as local models or partial dependence plots, but there are two reasons why it makes sense to consider interpretation methods developed specifically for neural networks: First, neural networks learn features and concepts in their hidden layers and we need special tools to uncover them. Second, the gradient can be utilized to implement interpretation methods that are more computationally efficient than model-agnostic methods that look at the model “from the outside”. Also most other methods in this book are intended for the interpretation of models for tabular data. Image and text data require different methods.
+
+The next chapters cover the following techniques that answer different questions:
+
+Learned Features: What features has the neural network learned?
+Pixel Attribution (Saliency Maps): How did each pixel contribute to a particular prediction?
+Concepts: Which more abstract concepts has the neural network learned?
+Adversarial Examples are closely related to counterfactual explanations: How can we trick the neural network?
+Influential Instances is a more general approach with a fast implementation for gradient-based methods such as neural networks: How influential was a training data point for a certain prediction?

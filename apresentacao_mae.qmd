@@ -4,13 +4,15 @@ subtitle: "Redes Neurais"
 author: 
   - Carolina Musso
   - Rafael Rocha
+  - Stefan Zurman
   - Vitor Borges
-  - Stefan 
 
 format:
   revealjs:
+    logo: unb.png
     incremental: true 
-    theme: dark
+    scrollable: true
+    theme: [serif, style.scss]
     code-block-border-left: "#31BAE9"
     code-block-bg: "#011627"
     code-overflow: wrap
