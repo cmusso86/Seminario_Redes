@@ -115,9 +115,9 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 
 ::: {.nonincremental}
 - Counterfactual explanations
-- Causal Discovery in the hidden layer of a DNN (CNN)
+- Explaining DNN (CNN) by causal interventions
 - Deep Causal Learning
-- Supply disruptions
+- CI and DNN: Supply disruptions
 :::
 
 
@@ -154,7 +154,7 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 
 A counterfactual explanation of a prediction describes the [smallest change to the feature]{style="color:MediumSeaGreen"} values that changes the prediction to a [predefined output]{style="color:red"}.
 
-![](capitulos/Rafa/ctrfac-feature.png){width="1400" height="250"}
+![](capitulos/Rafa/ctrfac-feature.png){width="1400" height="200"}
 
 How get a predicted Good credit risk with probability larger than 50% (against 24.2%)?
 
@@ -165,8 +165,10 @@ How get a predicted Good credit risk with probability larger than 50% (against 2
 
 ## Counterfactual example
 
+![](capitulos/Rafa/ctrfac-feature.png){width="1400" height="100"}
 
-![](capitulos/Rafa/ctrfac-results.png){width="1400" height="550"}
+
+![](capitulos/Rafa/ctrfac-results.png){width="1400" height="450"}
 
 
 ::: footer
@@ -174,7 +176,107 @@ How get a predicted Good credit risk with probability larger than 50% (against 2
 :::
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Explaining DNN (CNN) by causal interventions
+
+::: {.nonincremental}
+- The ability to perform arbitrary [causal interventions]{style="color:Violet"} allows [...] to seamlessly capture the chain of causal effects from the input, to the filters, to the DNN outputs
+- “What is the [impact]{style="color:Violet"} of the *n-th* filter on the *m-th* layer on the model’s predictions?”
+- Using the Structural Causal Models the model’s performance post compression could be predicted [without the need for retraining]{style="color:red"}.
+:::
+
+::: footer
+[Tanmayee Narendra, Anush Sankaran, Deepak Vijaykeerthy, Senthil Mani](https://arxiv.org/abs/1811.04376). *Explaining Deep Learning Models using Causal Inference*, 2022.
+:::
+
+
+## Explaining DNN (CNN) by causal interventions
+
+![](capitulos/Rafa/causal-interventions.png){.absolute width="1000" top=150 height="500" left="0"}
+
+::: footer
+[Tanmayee Narendra, Anush Sankaran, Deepak Vijaykeerthy, Senthil Mani](https://arxiv.org/abs/1811.04376). *Explaining Deep Learning Models using Causal Inference*, 2022.
+:::
+
+
+## Explaining DNN (CNN) by causal interventions
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.nonincremental}
+![](capitulos/Rafa/filter-remotions.png){width="600" height="450"}
+:::
+
+:::
+
+::: {.column width="50%"}
+![](capitulos/Rafa/resnet.png){width="500" height="450"}
+:::
+
+::::
+
+::: footer
+[Tanmayee Narendra, Anush Sankaran, Deepak Vijaykeerthy, Senthil Mani](https://arxiv.org/abs/1811.04376). *Explaining Deep Learning Models using Causal Inference*, 2022.
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Deep causal learning
+
+
+The three core strengths of deep learning for casual learning are:
+
+::: {.nonincremental}
+1. Causal explanations beyond RCTs;
+2. Strong representational and learning capabilities; and
+3. The ability to [approximate data generation mechanisms]{style="color:Violet"}.
+:::
+
+
+::: footer
+[Zizhen Deng, Xiaolong Zheng, Hu Tian, Daniel Dajun Zeng](http://arxiv.org/abs/2211.03374). *Deep Causal Learning: Representation, Discovery and Inference*, 2022.
+:::
+
+
+## Deep causal learning
+
+
+![](capitulos/Rafa/ci-fundamental-problems.png){.absolute width="1000" top=50 height="600" left="0"}
+
+::: footer
+Figure 8. Source: [Zizhen Deng, Xiaolong Zheng, Hu Tian, Daniel Dajun Zeng](http://arxiv.org/abs/2211.03374). *Deep Causal Learning: Representation, Discovery and Inference*, 2022.
+:::
+
+
+## Deep causal learning
+
 
 ![](capitulos/Rafa/deep-causal-learning.png){.absolute width="1000" top=50 height="600" left="0"}
 
@@ -183,7 +285,23 @@ Deep Causal Learning example. Real model: 𝐸(𝑋3|𝑑𝑜(𝑋2 = 𝑥)) = �
 :::
 
 
-## Steps for CI and DNN in Supply disruptions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## CI and DNN in Supply disruptions
 
 ::: {.incremental}
 1. The requirements and processes which are essential for a [causality-related data]{style="color:Violet"} mining phase;
