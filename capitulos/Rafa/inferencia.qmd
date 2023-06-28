@@ -26,10 +26,23 @@ title: "Variable importance"
 
 # Causal Inference and Deep Learning
 
-## Motivation
+## Motivation {auto-animate="true"}
 
-::: {style="text-align: center; margin-top: 1.5em; font-size: 1.3em"}
-::: incremental
+::: {style="text-align: center; margin-top: 1.5em; font-size: 1.4em"}
+::: nonincremental
+-   Given a patient who returned from Africa with a fever and body aches, the most likely AI's explanation was malaria
+-   But AI got mired in [probabilistic associations]{style="color:Violet"}
+:::
+:::
+ 
+::: footer
+[To Build Truly Intelligent Machines, Teach Them Cause and Effect](https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515/), *Judea Pearl* interview.
+:::
+
+## Motivation {auto-animate="true"}
+
+::: {style="text-align: center; margin-top: 1.5em; font-size: 1.2em"}
+::: nonincremental
 -   Given a patient who returned from Africa with a fever and body aches, the most likely AI's explanation was malaria
 -   But AI got mired in [probabilistic associations]{style="color:Violet"}
 -   The key, [Judea Pearl] argues, is to replace reasoning by association with [causal reasoning]{style="color:MediumSeaGreen"}
