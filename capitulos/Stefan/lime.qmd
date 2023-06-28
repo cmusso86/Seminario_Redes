@@ -1,6 +1,165 @@
 ---
 title: "Variable importance"
+editor: 
+  markdown: 
+    wrap: sentence
 ---
 
 # Aplicação LIME
 
+## LIME
+
+#### **Local**
+
+-   Instance-based
+
+#### **Interpretable**
+
+-   Understandable to humans
+
+#### Model-Agnostic
+
+-   Works for any model
+
+#### Explanations
+
+-   Explains the models output
+
+::: footer
+Ribeiro, Marco Tulio, et al. \"\'Why Should I Trust You?\'
+: Explaining the Predictions of Any Classifier.\" *ArXiv.org*, 16 Feb. 2016, [arxiv.org/abs/1602.04938](arxiv.org/abs/1602.04938).
+:::
+
+## Motivation
+
+-   Explain what led the ML model to give a certain prediction to an instance
+
+-   What variables affected the decision?
+
+-   Observe the behavior of the ML model with points around the instance of interest
+
+-   Simulate points in the neighborhood
+
+-   Create an interpretable surrogate model to explain the behaviour of the ML model around the instance
+
+    -   Linear Regression, Logistic Regression, GLM, GMA, Decision Tree, etc.
+
+## Motivation
+
+. . .
+
+```{r echo=F, out.width="100%", fig.align='center'}
+knitr::include_graphics("capitulos/Stefan/Imagens/Imagem3.png")
+```
+
+::: footer
+\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+:::
+
+## Step 1
+
+Select an instance of interest
+
+. . .
+
+```{r echo=F, out.width="50%", fig.align='center'}
+knitr::include_graphics("capitulos/Stefan/Imagens/Imagem1.png")
+```
+
+::: footer
+\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+:::
+
+## Step 2
+
+Generate new instances around the original instance and calculate their result with the ML model
+
+. . .
+
+```{r echo=F, out.width="50%", fig.align='center'}
+knitr::include_graphics("capitulos/Stefan/Imagens/Imagem4.png")
+```
+
+::: footer
+\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+:::
+
+## Step 3
+
+Apply a weight to the new instances depending on the distance to the original instance
+
+. . .
+
+```{r echo=F, out.width="50%", fig.align='center'}
+knitr::include_graphics("capitulos/Stefan/Imagens/Imagem5.png")
+```
+
+::: footer
+\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+:::
+
+## Step 4
+
+Obtain a new interpretable model with the weighted instances
+
+. . .
+
+```{r echo=F, out.width="40%", fig.align='center'}
+knitr::include_graphics("capitulos/Stefan/Imagens/Imagem6.png")
+```
+
+::: footer
+\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+:::
+
+## Step 5
+
+Interpret the local model
+
+. . .
+
+```{r echo=F, out.width="10%", fig.align='center'}
+knitr::include_graphics("capitulos/Stefan/Imagens/Imagem7.png")
+```
+
+```{r echo=F, out.width="60%", fig.align='center'}
+knitr::include_graphics("capitulos/Stefan/Imagens/Imagem8.png")
+```
+
+::: footer
+\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+:::
+
+## Obtaining the interpretable model
+
+Insert formulas here, but dont spend much time explaining them
+
+## Aplications
+
+Tabular, text and image
+
+Classification and regression
+
+## Aplications in R
+
+Aplication
+
+## Limitations
+
+-   Difficulties definying the neighborhood
+
+-   Dificulties with non-linearity
+
+-   Incorrect sampling for new instances can cause improbable instances
+
+-   Explanations to close points may vary greatly
+
+-   Easily manipulable to hide biases
+
+::: footer
+Alvarez-Melis, David, and Tommi S. Jaakkola.
+\"On the robustness of interpretability methods.\" arXiv preprint arXiv:1806.08049 (2018).
+
+Slack, Dylan, Sophie Hilgard, Emily Jia, Sameer Singh, and Himabindu Lakkaraju.
+\"Fooling lime and shap: Adversarial attacks on post hoc explanation methods.\" In Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society, pp. 180-186 (2020).
+:::

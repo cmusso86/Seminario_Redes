@@ -38,8 +38,6 @@ editor: visual
 
 {{< include capitulos/Conclusao/conclusao.qmd >}}
 
-
-
 </section>
 
 <section>
