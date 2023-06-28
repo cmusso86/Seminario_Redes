@@ -81,4 +81,6 @@ knitr::include_graphics("capitulos/Introducao/img/iml.png")
 
 -   [Interpretable Machine Learning, Christoph Molnar](https://christophm.github.io/interpretable-ml-book/)
 
--   [Montavon et al. (2018)](https://www.sciencedirect.com/science/article/pii/S1051200417302385?via%3Dihub)
+-   [Montavon *et al*. (2018)](https://www.sciencedirect.com/science/article/pii/S1051200417302385?via%3Dihub)
+
+- [NeuralNetTools: Beck (2018)](doi: 10.18637/jss.v085.i11).

@@ -60,6 +60,53 @@ knitr::include_graphics("capitulos/Carol/img/big-picture.png")
 ```
 
 
+## Package NeuralNet Tools
+
+```{r warning=FALSE, eval=F}
+pacman::p_load(NeuralNetTools, tidyverse,
+               nycflights13, nnet)
+
+tomod <- flights %>% 
+  filter(month == 12 & carrier == "UA") %>%
+       select(arr_delay, dep_delay, dep_time, 
+              arr_time, air_time, distance) %>% 
+  mutate_each(funs(scale), -arr_delay) %>%
+  mutate_each(funs(as.numeric), -arr_delay) %>%
+  mutate(arr_delay = scales::rescale(arr_delay, to = c(0, 1))) %>%
+  data.frame()
+
+mod <- nnet(arr_delay ~ ., size = 5,
+            linout = TRUE, data = tomod,
+               trace = FALSE)
+
+plotnet(mod)
+```
+. . . 
+
+```{r, echo=F, warning=FALSE}
+pacman::p_load(NeuralNetTools, tidyverse,
+               nycflights13, nnet)
+
+tomod <- flights %>% 
+  filter(month == 12 & carrier == "UA") %>%
+       select(arr_delay, dep_delay, dep_time, 
+              arr_time, air_time, distance) %>% 
+  mutate_each(funs(scale), -arr_delay) %>%
+  mutate_each(funs(as.numeric), -arr_delay) %>%
+  mutate(arr_delay = scales::rescale(arr_delay, to = c(0, 1))) %>%
+  data.frame()
+
+mod <- nnet(arr_delay ~ ., size = 5,
+            linout = TRUE, data = tomod,
+               trace = FALSE)
+
+plotnet(mod)
+```
+
+
+::: footer
+[NeuralNetTools: Visualization and Analysis Tools for Neural Networks](doi: 10.18637/jss.v085.i11), *Marcus W. Beck (2018)*.
+::: 
 ## Model-Agnostic Methods: PDP
 
 **The partial dependence plot**
@@ -74,7 +121,9 @@ knitr::include_graphics("capitulos/Carol/img/big-picture.png")
 knitr::include_graphics("capitulos/Carol/img/pdp.jpeg")
 ```
 
-
+::: footer
+[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
+::: 
 ## Model-Agnostic Methods: ALE
 
 **Accumulated local effect plots** 
@@ -88,6 +137,9 @@ knitr::include_graphics("capitulos/Carol/img/pdp.jpeg")
 knitr::include_graphics("capitulos/Carol/img/ale.jpeg")
 ```
 
+::: footer
+[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
+::: 
  
 ## Model-Agnostic Methods: FI
 
@@ -103,6 +155,9 @@ knitr::include_graphics("capitulos/Carol/img/ale.jpeg")
 knitr::include_graphics("capitulos/Carol/img/fi.png")
 ```
 
+::: footer
+[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
+::: 
 
 ## Model-Agnostic Methods: PFI
 
@@ -112,7 +167,6 @@ knitr::include_graphics("capitulos/Carol/img/fi.png")
 
 - A feature is "important" if shuffling its values increases the model error, because in this case the model relied on the feature for the prediction.
 
-- [Fisher *et al.* (2018)](https://arxiv.org/abs/1801.01489)
 
 . . . 
 
@@ -120,6 +174,9 @@ knitr::include_graphics("capitulos/Carol/img/fi.png")
 knitr::include_graphics("capitulos/Carol/img/perm.jpeg")
 ```
 
+::: footer
+[ll Models are Wrong, but Many are Useful: Learning a Variable's Importance by Studying an Entire Class of Prediction Models Simultaneously](https://arxiv.org/abs/1801.01489), *Fisher et al (2018)*.
+::: 
 
 ## Neural Networks Methods
 
@@ -131,20 +188,77 @@ knitr::include_graphics("capitulos/Carol/img/perm.jpeg")
 
 - What features has the neural network learned?
 
-- Activation maximization (AM)
+- Activation maximization (AM): the input that maximizes the activation of that unit.
 
-- Feature Visualization. 
+. . . 
+
+```{r echo=F, fig.align='center', out.width="70%"}
+knitr::include_graphics("capitulos/Carol/img/units.jpg")
+```
 
 
+::: footer
+[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
+::: 
+
+## Learned features
+
+- Network dissection
+
+. . . 
+
+```{r echo=F, fig.align='center', out.width="100%"}
+knitr::include_graphics("capitulos/Carol/img/dissection-network.png")
+```
+
+
+::: footer
+[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
+::: 
+
+## Pixel Attribution: 
+
+- Sensitivity A., Taylor Decom., Saliency Maps
+- How did each pixel contribute to a particular prediction?
+- **Perturbation-based:** SHAP, LIME
+- **Gradient-based:** Vanilla Grad., DeconvNet, Grad-CAM
+
+. . . 
+
+```{r echo=F, fig.align='center'}
+knitr::include_graphics("capitulos/Carol/img/sensitivity.png")
+```
+
+
+::: footer
+[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
+::: 
 ## Pixel Attribution (Saliency Maps): 
 
-- How did each pixel contribute to a particular prediction?
-Concepts: Which more abstract concepts has the neural network learned?
+```{r echo=F, fig.align='center', out.width="70%"}
+knitr::include_graphics("capitulos/Carol/img/original.png")
+```
+
+. . . 
+
+```{r echo=F, fig.align='center', out.width="70%"}
+knitr::include_graphics("capitulos/Carol/img/saliency.png")
+```
 
 
-## Adversarial Examples 
+::: footer
+[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
+::: 
+## Layer-wise relevance propagation
 
-- are closely related to counterfactual explanations: How can we trick the neural network?
+-  LRP: Backward propagation technique
 
-## Influential Instances 
-- is a more general approach with a fast implementation for gradient-based methods such as neural networks: How influential was a training data point for a certain prediction?
+. . . 
+
+```{r echo=F, fig.align='center', out.width="70%"}
+knitr::include_graphics("capitulos/Carol/img/lrp.png")
+```
+ 
+::: footer
+[Methods for interpreting and understanding deep neural networks](https://doi.org/10.1016/j.dsp.2017.10.011), *Montavon et al (2018)*.
+:::
