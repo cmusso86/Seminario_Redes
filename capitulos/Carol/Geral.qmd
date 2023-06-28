@@ -47,9 +47,9 @@ knitr::include_graphics("capitulos/Carol/img/pca.gif")
 ## Other techniques
 
 -   **Model Agnostic:**
-    -   Global: PDP, ALE, Feature Interaction
+    -   Global: PDP, ALE, Feature Interaction ...
     -   Local: LIME, SHAP
--   **Example based**: Counterfactual, Prototypes, KNN
+
 -   **DNN**: Leanerd features, Saliency Maps, Sensitivity Analysis, Taylos Decomposition, LRP
 
 ## Interpretability Methods layer

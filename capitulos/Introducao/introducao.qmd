@@ -55,9 +55,6 @@ knitr::include_graphics("capitulos/Introducao/img/iml.png")
 
 -   Interpretable ML: "extraction of relevant knowledge from a machine-learning model concerning relationships either contained in data or learned by the model".
 
--   Explain the predictions: relate the feature values of an instance to its model prediction in a humanly understandable way
-
-- No consensus. 
 
 ## Introduction: The classic approach
 
