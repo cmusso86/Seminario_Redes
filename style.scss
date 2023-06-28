@@ -1,8 +1,7 @@
 /*-- scss:defaults --*/
 
 // fonts
-$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
-  FreeSerif, serif !default;
+$font-family-sans-serif: "Arial";
   
 $font-size-root: 12px; 
 
@@ -15,8 +14,7 @@ $presentation-heading-color: #006633;
 $code-color: #006630;
 
 // headings
-$presentation-heading-font: "Palatino Linotype", "Book Antiqua", Palatino,
-  FreeSerif, serif !default;
+$presentation-heading-font: "Arial";
 $presentation-heading-color: #383d3d !default;
 
 /*-- scss:rules --*/
