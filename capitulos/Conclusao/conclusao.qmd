@@ -4,4 +4,4 @@ title: "Variable importance"
 
 # Conclusions
 
-This is the tipo of the iceberg!
+This is the tip of the iceberg!
