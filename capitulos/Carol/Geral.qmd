@@ -66,13 +66,11 @@ knitr::include_graphics("capitulos/Carol/img/big-picture.png")
 
 - Global, one or two variables. 
 
-- Average marginal effect
-
-- Features are independent
+- Average marginal effect, independent features.
 
 . . .  
 
-```{r echo=F, fig.align='center', out.extra="80%"}
+```{r, echo=F, fig.align='center', out.width="70%"}
 knitr::include_graphics("capitulos/Carol/img/pdp.jpeg")
 ```
 
@@ -82,11 +80,11 @@ knitr::include_graphics("capitulos/Carol/img/pdp.jpeg")
 **Accumulated local effect plots** 
 
 - Dependent features
-- Based on the conditional distribution: differences in predictions instead of averages
+- Conditional distribution: differences in predictions. 
  
 . . . 
 
-```{r echo=F, fig.align='center', out.extra="80%"}
+```{r, echo=F, fig.align='center', out.width="70%"}
 knitr::include_graphics("capitulos/Carol/img/ale.jpeg")
 ```
 
@@ -101,7 +99,7 @@ knitr::include_graphics("capitulos/Carol/img/ale.jpeg")
 
 . . . 
 
-```{r echo=F, fig.align='center', out.extra="80%"}
+```{r echo=F, fig.align='center', out.width="70%"}
 knitr::include_graphics("capitulos/Carol/img/fi.png")
 ```
 
@@ -118,7 +116,7 @@ knitr::include_graphics("capitulos/Carol/img/fi.png")
 
 . . . 
 
-```{r echo=F, fig.align='center', out.extra="80%"}
+```{r echo=F, fig.align='center', out.width="70%"}
 knitr::include_graphics("capitulos/Carol/img/perm.jpeg")
 ```
 
