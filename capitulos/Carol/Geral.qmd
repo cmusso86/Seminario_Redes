@@ -1,5 +1,5 @@
 ---
-title: "Importância de Variáveis"
+title: "Variable importance"
 editor: 
   markdown: 
     wrap: sentence
@@ -61,7 +61,7 @@ knitr::include_graphics("capitulos/Carol/img/pca.gif")
   - Why was a financial transaction classified as fraud?
 
 ```{r echo=F, fig.align='center'}
-knitr::include_graphics("capitulos/Carol/img/big-picture.gif")
+knitr::include_graphics("capitulos/Carol/img/big-picture.png")
 ```
 
 

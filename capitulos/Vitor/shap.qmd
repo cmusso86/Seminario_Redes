@@ -1,5 +1,5 @@
 ---
-title: "Importância de Variáveis"
+title: "Variable importance"
 ---
 
 # Aplicação SHAP
