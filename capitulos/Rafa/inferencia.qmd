@@ -17,9 +17,14 @@ title: "Variable importance"
   .my-slide {
     font-size: 64px;
   }
+
+    /* Increase the font size of all text in a specific slide */
+  .my-mid-slide {
+    font-size: 50px;
+  }
 </style>
 
-# Inferência Causal
+# Causal Inference and Deep Learning
 
 ## Motivation
 
@@ -165,10 +170,10 @@ How get a predicted Good credit risk with probability larger than 50% (against 2
 
 ## Counterfactual example
 
-![](capitulos/Rafa/ctrfac-feature.png){width="1400" height="100"}
+![](capitulos/Rafa/ctrfac-feature.png){width="1400" height="90"}
 
 
-![](capitulos/Rafa/ctrfac-results.png){width="1400" height="450"}
+![](capitulos/Rafa/ctrfac-results.png){width="1400" height="420"}
 
 
 ::: footer
@@ -248,7 +253,7 @@ How get a predicted Good credit risk with probability larger than 50% (against 2
 
 
 
-## Deep causal learning
+## Deep causal learning {.my-mid-slide}
 
 
 The three core strengths of deep learning for casual learning are:
