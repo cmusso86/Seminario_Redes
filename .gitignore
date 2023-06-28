@@ -4,6 +4,7 @@
 .Ruserdata
 Seminario_Redes.Rproj
 apresentacao_mae.html
+apresentacao_mae_files/*
 
 # Exclude Rafa .js and .css files
 Rafa/**/*.css
