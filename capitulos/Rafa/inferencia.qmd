@@ -66,13 +66,26 @@ title: "Variable importance"
 [To Build Truly Intelligent Machines, Teach Them Cause and Effect](https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515/), *Judea Pearl* interview.
 :::
 
-## Causal Inference 
+## Causal Inference {auto-animate="true"}
 
-
-::: {.incremental}
+::: {style="margin-top: 1.5em; font-size: 1.5em"}
+::: {.nonincremental}
 - Mathematics has not developed the asymmetric language required to capture our understanding that if $X$ causes $Y$ that [does not mean]{style="color:red"} that $Y$ causes $X$^["It sounds like a terrible thing to say against science, I know. If I were to say it to my mother, she’d slap me."]
+:::
+:::
+
+::: footer
+[To Build Truly Intelligent Machines, Teach Them Cause and Effect](https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515/), *Judea Pearl* interview.
+:::
+
+## Causal Inference {auto-animate="true"}
+
+::: {style="text-align: center; margin-top: 1.5em; font-size: 1.1em"}
+::: {.nonincremental}
+- Mathematics has not developed the asymmetric language required to capture our understanding that if $X$ causes $Y$ that does not mean that $Y$ causes $X$
 - Pearl proposes a formal language in which to make this kind of thinking possible 
-- The main change is the possibility to evaluate $P(Y = y|do(X = x))$
+- The main change is the possibility to evaluate [$P(Y = y|do(X = x))$]{style="color:red"}
+:::
 :::
 
 ::: footer
@@ -118,9 +131,9 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and Effect.* Basic Books, 2018.
 :::
 
-## Ladder of Causation {auto-animate="true"}
+---
 
-![](capitulos/Rafa/causal-ladder.png){.absolute width="600" top=0 height="675" left="650"}
+![](capitulos/Rafa/causal-ladder.png){.absolute width="600" top=00 height="675" left="400"}
 
 ::: footer
 Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and Effect.* Basic Books, 2018.
