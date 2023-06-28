@@ -47,9 +47,9 @@ knitr::include_graphics("capitulos/Carol/img/pca.gif")
 ## Other techniques
 
 -   **Model Agnostic:**
-    -   Global: PDP, ALE, Feature Interaction
+    -   Global: PDP, ALE, Feature Interaction ...
     -   Local: LIME, SHAP
--   **Example based**: Counterfactual, Prototypes, KNN
+
 -   **DNN**: Leanerd features, Saliency Maps, Sensitivity Analysis, Taylos Decomposition, LRP
 
 ## Interpretability Methods layer
@@ -106,57 +106,6 @@ plotnet(mod)
 
 ::: footer
 [NeuralNetTools: Visualization and Analysis Tools for Neural Networks](doi: 10.18637/jss.v085.i11), *Marcus W. Beck (2018)*.
-::: 
-## Model-Agnostic Methods: PDP
-
-**The partial dependence plot**
-
-- Global, one or two variables. 
-
-- Average marginal effect, independent features.
-
-. . .  
-
-```{r, echo=F, fig.align='center', out.width="70%"}
-knitr::include_graphics("capitulos/Carol/img/pdp.jpeg")
-```
-
-::: footer
-[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
-::: 
-## Model-Agnostic Methods: ALE
-
-**Accumulated local effect plots** 
-
-- Dependent features
-- Conditional distribution: differences in predictions. 
- 
-. . . 
-
-```{r, echo=F, fig.align='center', out.width="70%"}
-knitr::include_graphics("capitulos/Carol/img/ale.jpeg")
-```
-
-::: footer
-[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
-::: 
- 
-## Model-Agnostic Methods: FI
-
-**Feature interaction**
-
-- “The whole is greater than the sum of its parts”.
-
-- H-statistic quantifies interaction strength: the  joint effects of the features.
-
-. . . 
-
-```{r echo=F, fig.align='center', out.width="70%"}
-knitr::include_graphics("capitulos/Carol/img/fi.png")
-```
-
-::: footer
-[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
 ::: 
 
 ## Model-Agnostic Methods: PFI
