@@ -47,10 +47,10 @@ knitr::include_graphics("capitulos/Carol/img/pca.gif")
 ## Other techniques
 
 -   **Model Agnostic:**
-    -   Global: PDP, ALE, Feature Interaction
+    -   Global: Partial Dependence Plots, Acumulated Local Effects, Feature Interaction ...
     -   Local: LIME, SHAP
--   **Example based**: Counterfactual, Prototypes, KNN
--   **DNN**: Leanerd features, Saliency Maps, Sensitivity Analysis, Taylos Decomposition, LRP
+
+-   **DNN**: Leanerd features, Saliency Maps, Sensitivity Analysis, Taylor Decomposition, Layer Relevance propagation
 
 ## Interpretability Methods layer
 
@@ -60,104 +60,6 @@ knitr::include_graphics("capitulos/Carol/img/big-picture.png")
 ```
 
 
-## Package NeuralNet Tools
-
-```{r warning=FALSE, eval=F}
-pacman::p_load(NeuralNetTools, tidyverse,
-               nycflights13, nnet)
-
-tomod <- flights %>% 
-  filter(month == 12 & carrier == "UA") %>%
-       select(arr_delay, dep_delay, dep_time, 
-              arr_time, air_time, distance) %>% 
-  mutate_each(funs(scale), -arr_delay) %>%
-  mutate_each(funs(as.numeric), -arr_delay) %>%
-  mutate(arr_delay = scales::rescale(arr_delay, to = c(0, 1))) %>%
-  data.frame()
-
-mod <- nnet(arr_delay ~ ., size = 5,
-            linout = TRUE, data = tomod,
-               trace = FALSE)
-
-plotnet(mod)
-```
-. . . 
-
-```{r, echo=F, warning=FALSE}
-pacman::p_load(NeuralNetTools, tidyverse,
-               nycflights13, nnet)
-
-tomod <- flights %>% 
-  filter(month == 12 & carrier == "UA") %>%
-       select(arr_delay, dep_delay, dep_time, 
-              arr_time, air_time, distance) %>% 
-  mutate_each(funs(scale), -arr_delay) %>%
-  mutate_each(funs(as.numeric), -arr_delay) %>%
-  mutate(arr_delay = scales::rescale(arr_delay, to = c(0, 1))) %>%
-  data.frame()
-
-mod <- nnet(arr_delay ~ ., size = 5,
-            linout = TRUE, data = tomod,
-               trace = FALSE)
-
-plotnet(mod)
-```
-
-
-::: footer
-[NeuralNetTools: Visualization and Analysis Tools for Neural Networks](doi: 10.18637/jss.v085.i11), *Marcus W. Beck (2018)*.
-::: 
-## Model-Agnostic Methods: PDP
-
-**The partial dependence plot**
-
-- Global, one or two variables. 
-
-- Average marginal effect, independent features.
-
-. . .  
-
-```{r, echo=F, fig.align='center', out.width="70%"}
-knitr::include_graphics("capitulos/Carol/img/pdp.jpeg")
-```
-
-::: footer
-[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
-::: 
-## Model-Agnostic Methods: ALE
-
-**Accumulated local effect plots** 
-
-- Dependent features
-- Conditional distribution: differences in predictions. 
- 
-. . . 
-
-```{r, echo=F, fig.align='center', out.width="70%"}
-knitr::include_graphics("capitulos/Carol/img/ale.jpeg")
-```
-
-::: footer
-[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
-::: 
- 
-## Model-Agnostic Methods: FI
-
-**Feature interaction**
-
-- “The whole is greater than the sum of its parts”.
-
-- H-statistic quantifies interaction strength: the  joint effects of the features.
-
-. . . 
-
-```{r echo=F, fig.align='center', out.width="70%"}
-knitr::include_graphics("capitulos/Carol/img/fi.png")
-```
-
-::: footer
-[Interpretable Machine Learning: A Guide for Making Black Box Models Explainable](https://christophm.github.io/interpretable-ml-book/), *Christoph Molnar (2023)*.
-::: 
 
 ## Model-Agnostic Methods: PFI
 
@@ -262,3 +164,52 @@ knitr::include_graphics("capitulos/Carol/img/lrp.png")
 ::: footer
 [Methods for interpreting and understanding deep neural networks](https://doi.org/10.1016/j.dsp.2017.10.011), *Montavon et al (2018)*.
 :::
+
+
+## Package NeuralNet Tools
+
+```{r warning=FALSE, eval=F}
+pacman::p_load(NeuralNetTools, tidyverse,
+               nycflights13, nnet)
+
+tomod <- flights %>% 
+  filter(month == 12 & carrier == "UA") %>%
+       select(arr_delay, dep_delay, dep_time, 
+              arr_time, air_time, distance) %>% 
+  mutate_each(funs(scale), -arr_delay) %>%
+  mutate_each(funs(as.numeric), -arr_delay) %>%
+  mutate(arr_delay = scales::rescale(arr_delay, to = c(0, 1))) %>%
+  data.frame()
+
+mod <- nnet(arr_delay ~ ., size = 5,
+            linout = TRUE, data = tomod,
+               trace = FALSE)
+
+plotnet(mod)
+```
+. . . 
+
+```{r, echo=F, warning=FALSE}
+pacman::p_load(NeuralNetTools, tidyverse,
+               nycflights13, nnet)
+
+tomod <- flights %>% 
+  filter(month == 12 & carrier == "UA") %>%
+       select(arr_delay, dep_delay, dep_time, 
+              arr_time, air_time, distance) %>% 
+  mutate_each(funs(scale), -arr_delay) %>%
+  mutate_each(funs(as.numeric), -arr_delay) %>%
+  mutate(arr_delay = scales::rescale(arr_delay, to = c(0, 1))) %>%
+  data.frame()
+
+mod <- nnet(arr_delay ~ ., size = 5,
+            linout = TRUE, data = tomod,
+               trace = FALSE)
+
+plotnet(mod)
+```
+
+
+::: footer
+[NeuralNetTools: Visualization and Analysis Tools for Neural Networks](doi: 10.18637/jss.v085.i11), *Marcus W. Beck (2018)*.
+::: 
