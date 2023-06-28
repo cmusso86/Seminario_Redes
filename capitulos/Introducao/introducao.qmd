@@ -6,24 +6,38 @@ title: "Importância de Variáveis"
 
 - Introduction 
   - Interpretability of models
-- Techniques for model interpretation
+- Methods for model interpretation
 - Hands-on example:
-  - Shap
-  - Lime
+  - SHAP
+  - LIME
   - Causal Inference
 - Conclusions
 
 # Introduction
 
 
-## Introduction: Importance of variables
+## Introduction
 
 - Interpretability in a Data Driven World
 
+- Sometimes you do not care why a decision was made. In other cases, knowing the ‘why’ is important. 
+
+- Human desire to find meaning in the world.
+
 - Machine learning model is faster and cheaper to train in comparison to humans.
 
+
+## Introduction
+
 - If you focus only on performance, you will automatically get more and more opaque models. 
-  -  winning models are ensembles of models or boosted trees/deep neural networks.
+
+- By default, machine learning models pick up biases from the training data.
+
+- ML can be debugged and audited if interpretable.
+
+```{r echo=F}
+knitr::include_graphics("capitulos/Introducao/img/iml.png")
+```
 
 
 ## Introduction: Importance of variables
@@ -35,6 +49,15 @@ title: "Importância de Variáveis"
 - Important in applications such in health ans social sciences and where accountability is important. 
 
 - Tool for exploration and analysis in the sciences,  to extract new insights from complex physical, chemical, or biological systems.
+
+
+## Introduction: Interpretability
+
+- The degree to which a human can understand the cause of a decision or  can consistently predict the model’s result.
+
+- Interpretable ML: “extraction of relevant knowledge from a machine-learning model concerning relationships either contained in data or learned by the model”.
+
+- Explain the predictions: relate the feature values of an instance to its model prediction in a humanly understandable way
 
 ## Introduction: The classic approach
 

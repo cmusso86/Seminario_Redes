@@ -1,5 +1,5 @@
 ---
-title: "Importância de Variáveis"
+title: "Variable importance"
 subtitle: "Redes Neurais"
 author: 
   - Carolina Musso
