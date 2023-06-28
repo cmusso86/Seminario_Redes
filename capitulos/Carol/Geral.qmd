@@ -46,19 +46,14 @@ knitr::include_graphics("capitulos/Carol/img/pca.gif")
 
 ## Other techniques
 
--   Model Agnostic:
-    -   Global: PDP, ALE, Feature Interaction, Global Surrogate
-    -   Local: LIME, SHAP, Anchors...
--   Example based:
-    -   Counterfactual, Prototypes, Adversarial examples, knn.
--   DNN
-    -   Leanerd features, Saliency Maps, Sensitivity Analysis, Taylos Decomposition, LRP
+-   **Model Agnostic:**
+    -   Global: PDP, ALE, Feature Interaction
+    -   Local: LIME, SHAP
+-   **Example based**: Counterfactual, Prototypes, KNN
+-   **DNN**: Leanerd features, Saliency Maps, Sensitivity Analysis, Taylos Decomposition, LRP
 
-### Interpretability Methods layer
+## Interpretability Methods layer
 
--  Helps us deal with the opacity of machine learning models:
-  - What were the most important features for a particular diagnosis? 
-  - Why was a financial transaction classified as fraud?
 
 ```{r echo=F, fig.align='center'}
 knitr::include_graphics("capitulos/Carol/img/big-picture.png")
@@ -68,73 +63,89 @@ knitr::include_graphics("capitulos/Carol/img/big-picture.png")
 ## Model-Agnostic Methods: PDP
 
 **The partial dependence plot**
-- Global
-- Features are independent.
-  - predictions of instances that are unlikely in reality.
-- The partial function tells us for given value(s) of features S what the average marginal effect on the prediction is.
+
+- Global, one or two variables. 
+
+- Average marginal effect
+
+- Features are independent
+
+. . .  
+
+```{r echo=F, fig.align='center'}
+knitr::include_graphics("capitulos/Carol/img/pdp.jpeg")
+```
 
 
 ## Model-Agnostic Methods: ALE
 
-- Accumulated local effect plots
- - Dependent features
- - M-Plots avoid averaging predictions of unlikely data instances, but they mix the effect of a feature with the effects of all correlated features.
-ALE plots solve this problem by calculating -- also based on the conditional distribution of the features -- differences in predictions instead of averages
+**Accumulated local effect plots** 
+
+- Dependent features
+- Based on the conditional distribution: differences in predictions instead of averages
+ 
+. . . 
+
+```{r echo=F, fig.align='center'}
+knitr::include_graphics("capitulos/Carol/img/ale.jpeg")
+```
+
  
 ## Model-Agnostic Methods: FI
 
-- Feature interaction (H-statistic) quantifies to what extent the prediction is the result of joint effects of the features.
-- The interaction between two features is the change in the prediction that occurs by varying the features after considering the individual feature effects.
+**Feature interaction**
 
-- A feature is "important" if shuffling its values increases the model error, because in this case the model relied on the feature for the prediction.
+- “The whole is greater than the sum of its parts”.
 
-## Model-Agnostic Methods: FD
+- H-statistic quantifies interaction strength: the  joint effects of the features.
 
-- is a central idea of interpretability and a technique that decomposes the complex prediction function into smaller parts.
+. . . 
+
+```{r echo=F, fig.align='center'}
+knitr::include_graphics("capitulos/Carol/img/fi.png")
+```
 
 
 ## Model-Agnostic Methods: PFI
 
-- Permutation feature importance measures the importance of a feature as an increase in loss when the feature is permuted.
+**Permutation feature importance**
 
-- Permutation feature importance measures the increase in the prediction error of the model after we permuted the feature's values, which breaks the relationship between the feature and the true outcome.
+- Permuted the feature's values: breaks relationship between feature and outcome.
+
+- A feature is "important" if shuffling its values increases the model error, because in this case the model relied on the feature for the prediction.
+
+- [Fisher *et al.* (2018)](https://arxiv.org/abs/1801.01489)
+
+. . . 
+
+```{r echo=F, fig.align='center'}
+knitr::include_graphics("capitulos/Carol/img/perm.jpeg")
+```
 
 
-Based on this idea, Fisher, Rudin, and Dominici (2018)44 proposed a model-agnostic version of the feature importance and called it model reliance.
-They also introduced more advanced ideas about feature importance, for example a (model-specific) version that takes into account that many prediction models may predict the data well.
-Their paper is worth reading
+## Neural Networks Methods
 
-## Model-Agnostic Methods: GSM
-
-Global surrogate models replaces the original model with a simpler model for interpretation.
-
-## Model-Agnostic Methods: 
-
--Prototypes and criticisms are representative data point of a distribution and can be used to enhance interpretability.
-
-## Feature Interaction
-
-.7 Prototypes and Criticisms
-
-A prototype is a data instance that is representative of all the data.
-A criticism is a data instance that is not well represented by the set of prototypes.
-The purpose of criticisms is to provide insights together with prototypes, especially for data points which the prototypes do not represent well.
-Prototypes and criticisms can be used independently from a machine learning model to describe the data, but they can also be used to create an interpretable model or to make a black box model interpretable.
-
-## Neural Networks
-
-- Certainly use model-agnostic methods, s
-- NN learn features and concepts in their hidden layers and we need special tools to uncover them.
-- The gradient can be utilized to implement interpretation methods that are more computationally efficient than model-agnostic methods that look at the model "from the outside".
+- NN learn features in hidden layers:  special tools to uncover them.
+- The gradient can be utilized for more computationally efficient than model-agnostic methods that look at the model "from the outside".
+- Learned features, Saliency Maps, Layer-wise relevance propagation (LRP), Influential Instances
 
 ## Learned Features: 
 
 - What features has the neural network learned?
+
+- Activation maximization (AM)
+
+- Feature Visualization. 
+
+
 ## Pixel Attribution (Saliency Maps): 
 
 - How did each pixel contribute to a particular prediction?
 Concepts: Which more abstract concepts has the neural network learned?
+
+
 ## Adversarial Examples 
+
 - are closely related to counterfactual explanations: How can we trick the neural network?
 
 ## Influential Instances 
