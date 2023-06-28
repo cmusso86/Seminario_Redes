@@ -1,6 +1,6 @@
 ---
 title: "Variable importance"
-subtitle: "Redes Neurais"
+subtitle: "Neural Networks"
 author: 
   - Carolina Musso
   - Rafael Rocha
