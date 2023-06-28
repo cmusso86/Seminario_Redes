@@ -226,7 +226,7 @@ knitr::include_graphics("capitulos/Carol/img/dissection-network.png")
 . . . 
 
 ```{r echo=F, fig.align='center'}
-knitr::include_graphics("capitulos/Carol/img/sensitivity.png")
+knitr::include_graphics("capitulos/Carol/img/boat.png")
 ```
 
 
