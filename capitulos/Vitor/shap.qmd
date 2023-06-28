@@ -3,3 +3,65 @@ title: "Variable importance"
 ---
 
 # Aplicação SHAP
+
+## Cooperative Game Theory
+
+::: incremental
+- The Shapley value is a solution concept in cooperative game theory. 
+- It was named in honor of Lloyd Shapley, who introduced it in 1951 and won the Nobel Memorial Prize in Economic Sciences for it in 2012.
+![](capitulos/Vitor/images/Lloyd_Shapley_2_2012.jpg){width="475" height="500"}
+:::
+
+## Cooperative Game Theory
+
+::: incremental
+- Shapley value is a method for assigning payouts to players depending on their contribution to the total payout. 
+- Players cooperate in a coalition and receive a certain profit from this cooperation.
+- Some players may contribute more to the coalition than others.
+- What final distribution of generated surplus among the players should arise in any particular game?
+- How important is each player to the overall cooperation, and what payoff can he or she reasonably expect?
+:::
+
+## Cooperative Game Theory
+
+- Shapley's Value is contextualized in a cooperative game with $N$ agents in a coalition. Each agent has only two choices, cooperate or not cooperate. Therefore the number of possible coalitions is $2^{N}$.
+
+- The coalition is a subset of the set of agents $N$ and is represented by $S$. The set of all possible coalitions is represented by $\mathcal{P}(N)$.
+
+- The function $v: S \rightarrow \mathbb{R}$, assigns to the coalition $S$ a value that corresponds to the sum of the expected payoffs that the members of the coalition can obtain.
+
+## Cooperative Game Theory
+
+- The function $\varphi_{i}(v)$ returns a 'fair' proportion of distributing the coalition payoff according to the individual contribution of each agent. This function is defined as follows:
+
+$$
+\varphi_{i}(v) = \frac{1}{n} \sum_{S \subseteq N / \{i\}} \binom{n-1}{|S|}^{-1}  (v(S \cup \{ i \}) - v(S))
+$$
+
+## Cooperative Game Theory
+
+- One way to interpret what is being explained in this formula is as follows:
+
+$$
+\begin{align}
+& \varphi_{i}(v) = & \\
+& \frac{1}{number \space of \space agents} \sum_{coalition \space that \space excludes \space i} \frac{marginal \space contribution \space of \space i \space for \space this \space coalition}{number \space of \space coalitions \space that \space exclude \space i \space with \space this \space size}
+\end{align}
+$$
+
+
+## Applications: Machine Learning
+
+- Replicating the methodology used in the paper *Data valuation for medical imaging using Shapley value and application to a large-scale chest X-ray dataset* trying to evaluate the amount of predictbility that a single data point contributes to the power of a Deep Learning Model.
+- The article in question explores a method of quantifying the quality of each data point of the training base of a convolutional neural network (CNN). The neural network trained in the article uses X-ray images of the lung to diagnose pneumonia.
+
+## Applications: Machine Learning
+
+- Our application: Images of a section of the Candlesticks chart, from different time scales, were used for S&P500 assets. The purpose of the network is to classify these images according to the price variation 5 periods after the observed pattern, the classes are 'buy' and 'sell'. The main objective is to assess whether a low quality database can compromise the accuracy of the model.
+
+![](capitulos/Vitor/images/AAL_weekly_from_2008-12-05_to_2009-03-13.png){width="550" height="475"}
+
+- The image above corresponds to the price variation per share of 'American Airlines' between the dates of 2008-12-05 and 2009-03-13, each candle corresponds to the price variation in one of the weeks of the period.
+
+## Applications: Machine Learning
+
