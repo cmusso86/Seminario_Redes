@@ -12,7 +12,7 @@ format:
     logo: unb.png
     incremental: true 
     scrollable: true
-    theme: [serif, style.scss]
+    theme: [style.scss]
     code-block-border-left: "#31BAE9"
     code-block-bg: "#011627"
     code-overflow: wrap

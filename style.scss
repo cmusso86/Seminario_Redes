@@ -1,8 +1,7 @@
 /*-- scss:defaults --*/
 
 // fonts
-$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
-  FreeSerif, serif !default;
+$font-family-sans-serif: "Arial";
   
 $font-size-root: 12px; 
 
@@ -13,10 +12,11 @@ $link-color: #006630 !default;
 $selection-bg: #003366 !default;
 $presentation-heading-color: #006633;
 $code-color: #006630;
+$code-block-border-left: #31BAE9; 
+$code-block-bg: #011627;
 
 // headings
-$presentation-heading-font: "Palatino Linotype", "Book Antiqua", Palatino,
-  FreeSerif, serif !default;
+$presentation-heading-font: "Arial";
 $presentation-heading-color: #383d3d !default;
 
 /*-- scss:rules --*/
