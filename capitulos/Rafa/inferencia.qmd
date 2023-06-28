@@ -15,12 +15,12 @@ title: "Variable importance"
   
   /* Increase the font size of all text in a specific slide */
   .my-slide {
-    font-size: 64px;
+    font-size: 54px;
   }
 
     /* Increase the font size of all text in a specific slide */
   .my-mid-slide {
-    font-size: 50px;
+    font-size: 45px;
   }
 </style>
 
@@ -107,7 +107,7 @@ Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and E
 
 ## Ladder of Causation {auto-animate="true"}
 
-![](capitulos/Rafa/causal-ladder.png){.absolute width="600" top=0 height="675" left="600"}
+![](capitulos/Rafa/causal-ladder.png){.absolute width="600" top=0 height="675" left="650"}
 
 ::: footer
 Judea Pearl and Dana Mackenzie. *The book of Why: The New Science of Cause and Effect.* Basic Books, 2018.
@@ -311,7 +311,7 @@ Deep Causal Learning example. Real model: 𝐸(𝑋3|𝑑𝑜(𝑋2 = 𝑥)) = �
 ::: {.incremental}
 1. The requirements and processes which are essential for a [causality-related data]{style="color:Violet"} mining phase;
 2. A suitable selection of features to enable a best possible forecast of supply disruptions; and
-3. [Effective combination]{style="color:Violet"} of the DNN and causal inference theory by evaluating propensity scores^["propensity score methods are used for removing the effects of confounding when estimating the effects of treatment on outcomes:". See more in [Peter C. Austin's 2011 paper](https://doi.org/10.1080/00273171.2011.568786).].
+3. [Effective combination]{style="color:Violet"} of the DNN and causal inference theory by evaluating propensity scores^["Popensity score methods are used for removing the effects of confounding when estimating the effects of treatment on outcomes". See more in [Peter C. Austin's 2011 paper](https://doi.org/10.1080/00273171.2011.568786).].
 :::
  
 
@@ -323,6 +323,10 @@ Source: [Bodendorf, Sauter, and Franke](https://www.sciencedirect.com/science/ar
 
 ![](capitulos/Rafa/framework.png){.absolute width="1400" top=0 height="800" left="0"}
 
+::: footer
+[Bodendorf, Sauter, and Franke](https://www.sciencedirect.com/science/article/abs/pii/S0925527322002900?via%3Dihub).
+*A mixed methods approach to analyze and predict supply disruptions by combining causal inference and deep learning*. 2023. International Journal of Production Economics, Volume 256.
+:::
 
 ## Usefulness of CI and DNN in Supply disruptions
 
@@ -343,6 +347,12 @@ Source: [Bodendorf, Sauter, and Franke](https://www.sciencedirect.com/science/ar
 
 ![](capitulos/Rafa/graph.png){.absolute width="1400" top=0 height="800" left="0"}
 
+::: footer
+[Bodendorf, Sauter, and Franke](https://www.sciencedirect.com/science/article/abs/pii/S0925527322002900?via%3Dihub).
+*A mixed methods approach to analyze and predict supply disruptions by combining causal inference and deep learning*. 2023. International Journal of Production Economics, Volume 256.
+:::
+
+
 ## Examples of conclusions
 
 ::: {.nonincremental}
@@ -350,6 +360,11 @@ Source: [Bodendorf, Sauter, and Franke](https://www.sciencedirect.com/science/ar
 - [Product Group]{style="color:MediumSeaGreen"}: raw material suppliers show a superior delivery performance ([increase of 55.2%]{style="color:red"}) in comparison to vendors offering operating supplies, measurement equipment, and spare parts.
 :::
 
+
+::: footer
+[Bodendorf, Sauter, and Franke](https://www.sciencedirect.com/science/article/abs/pii/S0925527322002900?via%3Dihub).
+*A mixed methods approach to analyze and predict supply disruptions by combining causal inference and deep learning*. 2023. International Journal of Production Economics, Volume 256.
+:::
 
 
 
