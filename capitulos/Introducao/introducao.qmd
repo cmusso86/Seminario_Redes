@@ -2,81 +2,83 @@
 title: "Variable importance"
 ---
 
-## What to expect 
+## What to expect
 
-- Introduction 
-  - Interpretability of models
-- Methods for model interpretation
-- Hands-on example:
-  - SHAP
-  - LIME
-  - Causal Inference
-- Conclusions
+-   Introduction
+    -   Interpretability of models
+-   Methods for model interpretation
+-   Hands-on example:
+    -   SHAP
+    -   LIME
+    -   Causal Inference
+-   Conclusions
 
 # Introduction
 
+## Introduction: Variable importance
+
+-   Interpretability in a Data Driven World
+
+-   Sometimes you do not care why a decision was made. In other cases, knowing the 'why' is important.
+
+-   Human desire to find meaning in the world.
+
+-   Machine learning model is faster and cheaper to train in comparison to humans.
 
 ## Introduction
 
-- Interpretability in a Data Driven World
+-   Performance vs opaque models.
 
-- Sometimes you do not care why a decision was made. In other cases, knowing the ‘why’ is important. 
+-   ML models pick up biases from the training data.
 
-- Human desire to find meaning in the world.
+-   ML can be debugged and audited *if interpretable*.
 
-- Machine learning model is faster and cheaper to train in comparison to humans.
+. . . 
 
-
-## Introduction
-
-- If you focus only on performance, you will automatically get more and more opaque models. 
-
-- By default, machine learning models pick up biases from the training data.
-
-- ML can be debugged and audited if interpretable.
-
-```{r echo=F}
+```{r, echo=F, fig.align='center'}
 knitr::include_graphics("capitulos/Introducao/img/iml.png")
 ```
 
+## Introduction: Interpretability
 
-## Introduction: Importance of variables
+-   Verify if the accuracy does not result from the exploitation of artifacts.
 
-- It is also essential to verify if the accuracy does not result from the exploitation of artifacts.
+-   Key ingredient of a robust validation procedure.
 
-- Key ingredient of a robust validation procedure.
+-   Important in health and social sciences: accountability.
 
-- Important in applications such in health ans social sciences and where accountability is important. 
-
-- Tool for exploration and analysis in the sciences,  to extract new insights from complex physical, chemical, or biological systems.
-
+-   Exploration and analysis in the sciences: extract insights from complex systems.
 
 ## Introduction: Interpretability
 
-- The degree to which a human can understand the cause of a decision or  can consistently predict the model’s result.
+-   The degree to which a human can understand the cause of a decision or can consistently predict the model's result.
 
-- Interpretable ML: “extraction of relevant knowledge from a machine-learning model concerning relationships either contained in data or learned by the model”.
+-   Interpretable ML: "extraction of relevant knowledge from a machine-learning model concerning relationships either contained in data or learned by the model".
 
-- Explain the predictions: relate the feature values of an instance to its model prediction in a humanly understandable way
+-   Explain the predictions: relate the feature values of an instance to its model prediction in a humanly understandable way
+
+- No consensus. 
 
 ## Introduction: The classic approach
 
-- Models inherently interpretable: linear regression, logistic regression, decision tree...
-   - Coefficients: rates, odds ratio...
-   
-- Lower predictive performance in comparison to other machine learning models.
+-   Models inherently interpretable: linear regression, logistic regression, decision tree...
 
-- However, insights are hidden in increasingly complex models. 
+    -   Coefficients: rates, odds ratio...
 
+-   Lower predictive performance in comparison to other machine learning models.
+
+-   However, insights are hidden in increasingly complex models.
 
 ## Introduction: Interpreting DNNs
 
--  Interpreting deep networks remains a young and emerging field of research. 
-  - Numerous coexisting approaches.
-  - We will present some possible techniques. 
-  - Focus on supervised learning.
+-   Interpreting deep networks remains a young and emerging field of research.
 
-- [Interpretable Machine Learning, Christoph Molnar](https://christophm.github.io/interpretable-ml-book/)
-- [Montavon et al. (2018)](https://www.sciencedirect.com/science/article/pii/S1051200417302385?via%3Dihub)
+-   Numerous coexisting approaches.
 
+-   We will present some possible techniques.
 
+-   Focus on supervised learning.
+
+-   [Interpretable Machine Learning, Christoph Molnar](https://christophm.github.io/interpretable-ml-book/)
+
+-   [Montavon et al. (2018)](https://www.sciencedirect.com/science/article/pii/S1051200417302385?via%3Dihub)
