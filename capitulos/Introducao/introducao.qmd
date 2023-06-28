@@ -23,7 +23,6 @@ title: "Variable importance"
 
 -   Human desire to find meaning in the world.
 
--   Machine learning model is faster and cheaper to train in comparison to humans.
 
 ## Introduction
 
@@ -41,19 +40,13 @@ knitr::include_graphics("capitulos/Introducao/img/iml.png")
 
 ## Introduction: Interpretability
 
--   Verify if the accuracy does not result from the exploitation of artifacts.
-
--   Key ingredient of a robust validation procedure.
+-   Verify if the accuracy results come from artifacts: validation.
 
 -   Important in health and social sciences: accountability.
 
 -   Exploration and analysis in the sciences: extract insights from complex systems.
 
-## Introduction: Interpretability
-
 -   The degree to which a human can understand the cause of a decision or can consistently predict the model's result.
-
--   Interpretable ML: "extraction of relevant knowledge from a machine-learning model concerning relationships either contained in data or learned by the model".
 
 
 ## Introduction: The classic approach
