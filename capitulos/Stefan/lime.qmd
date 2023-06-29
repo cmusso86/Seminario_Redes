@@ -146,6 +146,8 @@ $\Omega(g)$ penalizes high complexity models
 
 ## Aplications
 
+Can be used for classification or regression models
+
 1.  Tabular data
 
     1.  Values usually sampled from a normal distribution for each variable
@@ -153,8 +155,6 @@ $\Omega(g)$ penalizes high complexity models
 2.  Text or Image data
 
     1.  Words or mega-pixels turned on or off according to a bernoulli distribution
-
-Can be used for classification or regression models
 
 ## Aplications in R
 
@@ -177,7 +177,7 @@ knitr::include_graphics("capitulos/Stefan/Imagens/Imagem10.png")
 ```
 
 ::: footer
-\"LIME \| Machine Learning Model Interpretability Using LIME in R.\" *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
+"LIME \| Machine Learning Model Interpretability Using LIME in R." *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
 :::
 
 ## Aplications in R
@@ -199,7 +199,7 @@ trControl = trainControl(method = "repeatedcv", number = 10,repeats = 5, verbose
 ```
 
 ::: footer
-\"LIME \| Machine Learning Model Interpretability Using LIME in R.\" *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
+"LIME \| Machine Learning Model Interpretability Using LIME in R." *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
 :::
 
 ## Aplications in R
@@ -209,7 +209,7 @@ model_rf
 ```
 
 ::: footer
-\"LIME \| Machine Learning Model Interpretability Using LIME in R.\" *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
+"LIME \| Machine Learning Model Interpretability Using LIME in R." *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
 :::
 
 ## Aplications in R
@@ -222,7 +222,7 @@ plot_features(explanation1)
 ```
 
 ::: footer
-\"LIME \| Machine Learning Model Interpretability Using LIME in R.\" *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
+"LIME \| Machine Learning Model Interpretability Using LIME in R." *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
 :::
 
 ## Limitations
