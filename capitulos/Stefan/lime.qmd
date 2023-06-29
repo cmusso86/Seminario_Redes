@@ -138,17 +138,17 @@ Insert formulas here, but dont spend much time explaining them
 
 ## Aplications
 
-1.  Tabular data
+-   **Tabular data**
 
-    1.  Values usually sampled from a normal distribution for each variable
+  -  Values usually sampled from a normal distribution for each variable
 
-2.  Text data
+-   **Text data**
 
-    1.  Words turned on or off according to a bernoulli distribution
+  - Words turned on or off according to a bernoulli distribution
 
-3.  Image data
+-  **Image data**
 
-    1.  Mega-pixels turned on or off according to a bernoulli distribution
+    - Mega-pixels turned on or off according to a bernoulli distribution
 
 ## Aplications in R
 

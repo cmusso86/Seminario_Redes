@@ -285,9 +285,9 @@ How get a predicted Good credit risk with probability larger than 50% (against 2
 The three core strengths of deep learning for casual learning are:
 
 ::: {.nonincremental}
-1. Causal explanations beyond RCTs;
-2. Strong representational and learning capabilities; and
-3. The ability to [approximate data generation mechanisms]{style="color:Violet"}.
+- **1** Causal explanations beyond RCTs;
+- **2** Strong representational and learning capabilities; and
+- **3** The ability to [approximate data generation mechanisms]{style="color:Violet"}.
 :::
 
 
@@ -335,9 +335,9 @@ Deep Causal Learning example. Real model: 𝐸(𝑋3|𝑑𝑜(𝑋2 = 𝑥)) = �
 ## CI and DNN in Supply disruptions
 
 ::: {.incremental}
-1. The requirements and processes which are essential for a [causality-related data]{style="color:Violet"} mining phase;
-2. A suitable selection of features to enable a best possible forecast of supply disruptions; and
-3. [Effective combination]{style="color:Violet"} of the DNN and causal inference theory by evaluating propensity scores^["Popensity score methods are used for removing the effects of confounding when estimating the effects of treatment on outcomes". See more in [Peter C. Austin's 2011 paper](https://doi.org/10.1080/00273171.2011.568786).].
+- **1** The requirements and processes which are essential for a [causality-related data]{style="color:Violet"} mining phase;
+- **2** A suitable selection of features to enable a best possible forecast of supply disruptions; and
+- **3** [Effective combination]{style="color:Violet"} of the DNN and causal inference theory by evaluating propensity scores^["Popensity score methods are used for removing the effects of confounding when estimating the effects of treatment on outcomes". See more in [Peter C. Austin's 2011 paper](https://doi.org/10.1080/00273171.2011.568786).].
 :::
  
 

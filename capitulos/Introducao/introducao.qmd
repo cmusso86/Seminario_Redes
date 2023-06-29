@@ -7,7 +7,7 @@ title: "Variable importance"
 -   Introduction
     -   Interpretability of models
 -   Methods for model interpretation
--   Hands-on example:
+-   Example:
     -   SHAP
     -   LIME
     -   Causal Inference
