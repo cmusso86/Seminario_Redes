@@ -26,8 +26,10 @@ editor:
 -   Explains the models output
 
 ::: footer
-Ribeiro, Marco Tulio, et al. \"\'Why Should I Trust You?\'
-: Explaining the Predictions of Any Classifier.\" *ArXiv.org*, 16 Feb. 2016, [arxiv.org/abs/1602.04938](arxiv.org/abs/1602.04938).
+
+Ribeiro, Marco Tulio, et al. "'Why Should I Trust You?'
+
+:   Explaining the Predictions of Any Classifier." *ArXiv.org*, 16 Feb. 2016, [arxiv.org/abs/1602.04938](arxiv.org/abs/1602.04938).
 :::
 
 ## Motivation
@@ -53,7 +55,7 @@ knitr::include_graphics("capitulos/Stefan/Imagens/Imagem3.png")
 ```
 
 ::: footer
-\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+"Understanding LIME \| Explainable AI." *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
 :::
 
 ## Step 1
@@ -67,7 +69,7 @@ knitr::include_graphics("capitulos/Stefan/Imagens/Imagem1.png")
 ```
 
 ::: footer
-\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+"Understanding LIME \| Explainable AI." *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
 :::
 
 ## Step 2
@@ -81,7 +83,7 @@ knitr::include_graphics("capitulos/Stefan/Imagens/Imagem4.png")
 ```
 
 ::: footer
-\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+"Understanding LIME \| Explainable AI." *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
 :::
 
 ## Step 3
@@ -95,7 +97,7 @@ knitr::include_graphics("capitulos/Stefan/Imagens/Imagem5.png")
 ```
 
 ::: footer
-\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+"Understanding LIME \| Explainable AI." *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
 :::
 
 ## Step 4
@@ -109,7 +111,7 @@ knitr::include_graphics("capitulos/Stefan/Imagens/Imagem6.png")
 ```
 
 ::: footer
-\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+"Understanding LIME \| Explainable AI." *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
 :::
 
 ## Step 5
@@ -127,7 +129,7 @@ knitr::include_graphics("capitulos/Stefan/Imagens/Imagem8.png")
 ```
 
 ::: footer
-\"Understanding LIME \| Explainable AI.\" *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
+"Understanding LIME \| Explainable AI." *Youtube*, [www.youtube.com/watch?v=CYl172IwqKs](www.youtube.com/watch?v=CYl172IwqKs).
 :::
 
 ## Obtaining the interpretable model
@@ -136,13 +138,21 @@ Insert formulas here, but dont spend much time explaining them
 
 ## Aplications
 
-Tabular, text and image
+1.  Tabular data
 
-Classification and regression
+    1.  Values usually sampled from a normal distribution for each variable
+
+2.  Text data
+
+    1.  Words turned on or off according to a bernoulli distribution
+
+3.  Image data
+
+    1.  Mega-pixels turned on or off according to a bernoulli distribution
 
 ## Aplications in R
 
-Aplication
+Used for classification and regression models
 
 ## Limitations
 
@@ -158,8 +168,8 @@ Aplication
 
 ::: footer
 Alvarez-Melis, David, and Tommi S. Jaakkola.
-\"On the robustness of interpretability methods.\" arXiv preprint arXiv:1806.08049 (2018).
+"On the robustness of interpretability methods." arXiv preprint arXiv:1806.08049 (2018).
 
 Slack, Dylan, Sophie Hilgard, Emily Jia, Sameer Singh, and Himabindu Lakkaraju.
-\"Fooling lime and shap: Adversarial attacks on post hoc explanation methods.\" In Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society, pp. 180-186 (2020).
+"Fooling lime and shap: Adversarial attacks on post hoc explanation methods." In Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society, pp. 180-186 (2020).
 :::
