@@ -66,30 +66,31 @@ ul.task-list li input[type="checkbox"] {
 <h1>Aplicação SHAP</h1>
 <section id="cooperative-game-theory" class="level2">
 <h2 class="anchored" data-anchor-id="cooperative-game-theory">Cooperative Game Theory</h2>
-<div class="incremental">
-<ul class="incremental">
+<ul>
 <li>The Shapley value is a solution concept in cooperative game theory.</li>
-<li>It was named in honor of Lloyd Shapley, who introduced it in 1951 and won the Nobel Memorial Prize in Economic Sciences for it in 2012. <img src="capitulos/Vitor/images/Lloyd_Shapley_2_2012.jpg" width="475" height="550"></li>
+<li>It was named in honor of Lloyd Shapley, who introduced it in 1951 and won the Nobel Memorial . . .</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="capitulos/Vitor/images/Lloyd_Shapley_2_2012.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Prize in Economic Sciences for it in 2012.</figcaption>
+</figure>
 </div>
 </section>
 <section id="cooperative-game-theory-1" class="level2">
 <h2 class="anchored" data-anchor-id="cooperative-game-theory-1">Cooperative Game Theory</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Shapley value is a method for assigning payouts to players depending on their contribution to the total payout.</li>
+<ul>
 <li>Players cooperate in a coalition and receive a certain profit from this cooperation.</li>
 <li>Some players may contribute more to the coalition than others.</li>
-<li>What final distribution of generated surplus among the players should arise in any particular game?</li>
 <li>How important is each player to the overall cooperation, and what payoff can he or she reasonably expect?</li>
+<li>Shapley value is a method for assigning payoffs to players depending on their contribution in the total payoff.</li>
 </ul>
-</div>
 </section>
 <section id="cooperative-game-theory-2" class="level2">
 <h2 class="anchored" data-anchor-id="cooperative-game-theory-2">Cooperative Game Theory</h2>
 <ul>
-<li><p>Shapley’s Value is contextualized in a cooperative game with <span class="math inline">\(N\)</span> agents in a coalition. Each agent has only two choices, cooperate or not cooperate. Therefore the number of possible coalitions is <span class="math inline">\(2^{N}\)</span>.</p></li>
-<li><p>The coalition is a subset of the set of agents <span class="math inline">\(N\)</span> and is represented by <span class="math inline">\(S\)</span>. The set of all possible coalitions is represented by <span class="math inline">\(\mathcal{P}(N)\)</span>.</p></li>
+<li><p>It is contextualized in a cooperative game with <span class="math inline">\(N\)</span> agents in a <strong>coalition</strong>. Each agent has only two choices, cooperate or not cooperate. Therefore the number of possible coalitions is <span class="math inline">\(2^{N}\)</span>.</p></li>
+<li><p>The coalition is a subset of the set of agents <span class="math inline">\(N\)</span> and is represented by <span class="math inline">\(S\)</span>. The set of all possible coalitions is represented by <span class="math inline">\(\mathcal{P}(N) \Rightarrow S \in \mathcal{P}(N)\)</span>.</p></li>
 <li><p>The function <span class="math inline">\(v: S \rightarrow \mathbb{R}\)</span>, assigns to the coalition <span class="math inline">\(S\)</span> a value that corresponds to the sum of the expected payoffs that the members of the coalition can obtain.</p></li>
 </ul>
 </section>
@@ -98,6 +99,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>The function <span class="math inline">\(\varphi_{i}(v)\)</span> returns a ‘fair’ proportion of distributing the coalition payoff according to the individual contribution of each agent. This function is defined as follows:</li>
 </ul>
+<p>. . .</p>
 <p><span class="math display">\[
 \varphi_{i}(v) = \frac{1}{n} \sum_{S \subseteq N / \{i\}} \binom{n-1}{|S|}^{-1}  (v(S \cup \{ i \}) - v(S))
 \]</span></p>
@@ -105,32 +107,95 @@ ul.task-list li input[type="checkbox"] {
 <section id="cooperative-game-theory-4" class="level2">
 <h2 class="anchored" data-anchor-id="cooperative-game-theory-4">Cooperative Game Theory</h2>
 <ul>
-<li>One way to interpret what is being explained in this formula is as follows:</li>
+<li>One way to interpret what is being explained in the formula is that the Shapley value of an agent is the average marginal contribution of the agent to all possible coalitions.:</li>
 </ul>
+<p>. . .</p>
 <p><span class="math display">\[
-\varphi_{i}(v) = \\
-\frac{1}{number \space of \space agents} \sum_{coalition \space that \space excludes \space i} \frac{marginal \space contribution \space of \space i \space for \space this \space coalition}{number \space of \space coalitions \space that \space exclude \space i \space with \space this \space size}
+\begin{align}
+&amp; \varphi_{i}(v) = &amp; \\
+&amp; \frac{1}{number \space of \space agents} \sum_{coalition \space that \space excludes \space i} \frac{marginal \space contribution \space of \space i \space for \space this \space coalition}{number \space of \space coalitions \space that \space exclude \space i \space with \space this \space size}
+\end{align}
 \]</span></p>
 </section>
 <section id="applications-machine-learning" class="level2">
 <h2 class="anchored" data-anchor-id="applications-machine-learning">Applications: Machine Learning</h2>
 <ul>
-<li>Replicating the methodology used in the paper <em>Data valuation for medical imaging using Shapley value and application to a large-scale chest X-ray dataset</em> trying to evaluate the amount of predictbility that a single data point contributes to the power of a Deep Learning Model.</li>
-<li>The article in question explores a method of quantifying the quality of each data point of the training base of a convolutional neural network (CNN). The neural network trained in the article uses X-ray images of the lung to diagnose pneumonia.</li>
+<li>Replicating the methodology used in the paper Tang et al.&nbsp;(2020) trying to evaluate the amount of predictbility that a single data point contributes to the power of a Deep Learning Model.</li>
+<li>The article in question explores a method of quantifying the quality of each data point of the training base of a convolutional neural network (CNN).</li>
+<li>The neural network trained in the article uses X-ray images of the lung to diagnose pneumonia.</li>
+<li>One of the main features of the X-ray database used in the article is the misclassification of data points according to the actual diagnosis of the image.</li>
 </ul>
+<div class="footer">
+<p><a href="https://www.semanticscholar.org/paper/Data-valuation-for-medical-imaging-using-Shapley-to-Tang-Ghorbani/8a4a77347f274b58325ef6c5575611b589d4ba6c">Data valuation for medical imaging using Shapley value and application to a large-scale chest X-ray dataset</a>, Scientific Paper.</p>
+</div>
 </section>
 <section id="applications-machine-learning-1" class="level2">
 <h2 class="anchored" data-anchor-id="applications-machine-learning-1">Applications: Machine Learning</h2>
 <ul>
-<li>Our application: Images of a section of the Candlesticks chart, from different time scales, were used for S&amp;P500 assets. The purpose of the network is to classify these images according to the price variation 5 periods after the observed pattern, the classes are ‘buy’ and ‘sell’. The main objective is to assess whether a low quality database can compromise the accuracy of the model.</li>
+<li>Pixels of the same image were summed, resulting in a single value for each image.</li>
+<li>The experiment iteratively removes the x% best data, and retrains the network to measure the effects of this on the evaluation metrics.</li>
+<li>Tang et al.&nbsp;(2020) manages to obtain a causal relationship between shap values and the accuracy of the model, reaching an efficiency of 70% at best.</li>
 </ul>
-<p><img src="capitulos/Vitor/images/AAL_weekly_from_2008-12-05_to_2009-03-13.png" width="550" height="475"></p>
-<ul>
-<li>The image above corresponds to the price variation per share of ‘American Airlines’ between the dates of 2008-12-05 and 2009-03-13, each candle corresponds to the price variation in one of the weeks of the period.</li>
-</ul>
+<p>. . .</p>
+<p><img src="capitulos/Vitor/images/Removendo%20dados%20de%20baixa%20qualidade%20artigo.png" class="img-fluid"></p>
 </section>
 <section id="applications-machine-learning-2" class="level2">
 <h2 class="anchored" data-anchor-id="applications-machine-learning-2">Applications: Machine Learning</h2>
+<ul>
+<li>Our application: Images of a section of the Candlesticks chart, from different time scales, were used for S&amp;P500 assets.</li>
+<li>The purpose of the network is to classify these images according to the price variation 5 periods after the observed pattern, the classes are ‘buy’ and ‘sell’.</li>
+<li>The image pixels will collaborate with the classification of the image, and the Shapley values will be used to measure the importance of each pixel in the classification.</li>
+</ul>
+</section>
+<section id="applications-machine-learning-3" class="level2">
+<h2 class="anchored" data-anchor-id="applications-machine-learning-3">Applications: Machine Learning</h2>
+<section id="disclaimer-dont-invest-using-candlesticks-charts." class="level3">
+<h3 class="anchored" data-anchor-id="disclaimer-dont-invest-using-candlesticks-charts.">Disclaimer: Don’t invest using candlesticks charts.</h3>
+</section>
+</section>
+<section id="applications-machine-learning-4" class="level2">
+<h2 class="anchored" data-anchor-id="applications-machine-learning-4">Applications: Machine Learning</h2>
+<ul>
+<li>The training set of the main model contains 700 images, and the test base 300 images.</li>
+<li>This image corresponds to the price variation per share of ‘American Airlines’ between the dates of 2008-12-05 and 2009-03-13, each candle corresponds to the price variation in one of the weeks of the period.</li>
+</ul>
+<p>. . .</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="capitulos/Vitor/images/AAL_weekly_from_2008-12-05_to_2009-03-13.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="applications-machine-learning-5" class="level2">
+<h2 class="anchored" data-anchor-id="applications-machine-learning-5">Applications: Machine Learning</h2>
+<ul>
+<li>Using the <code>shap</code> library from Python, the Shapley values were calculated for each pixel in every image in the training set.</li>
+</ul>
+<p>. . .</p>
+<p><img src="capitulos/Vitor/images/Removendo%20dados%20de%20alta%20qualidade.png" class="img-fluid"></p>
+</section>
+<section id="applications-machine-learning-6" class="level2">
+<h2 class="anchored" data-anchor-id="applications-machine-learning-6">Applications: Machine Learning</h2>
+<ul>
+<li>Results of removing the x% worst data from the training set.</li>
+</ul>
+<p>. . .</p>
+<p><img src="capitulos/Vitor/images/Removendo%20dados%20de%20baixa%20qualidade.png" class="img-fluid" width="1560"></p>
+</section>
+<section id="applications-machine-learning-7" class="level2">
+<h2 class="anchored" data-anchor-id="applications-machine-learning-7">Applications: Machine Learning</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="capitulos/Vitor/images/Resultado%20regressões.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="applications-machine-learning-8" class="level2">
+<h2 class="anchored" data-anchor-id="applications-machine-learning-8">Applications: Machine Learning</h2>
+<ul>
+<li>This is because the low-shapley medical data, which probably had classification problems, were removed from the training base and the network was able to learn only the true features of the well-classified images.</li>
+<li>A characteristic of the data that was used in the empirical exercise is the absence of classification errors.</li>
+</ul>
 </section>
 </section>
 

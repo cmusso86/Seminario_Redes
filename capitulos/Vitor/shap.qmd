@@ -7,7 +7,7 @@ title: "Variable importance"
 ## Cooperative Game Theory
 
 -   The Shapley value is a solution concept in cooperative game theory.
--   It was named in honor of Lloyd Shapley, who introduced it in 1951 and won the Nobel Memorial . . .
+-   It was named in honor of Lloyd Shapley, who introduced it in 1951 and won the Nobel Memorial Prize in Economic Sciences for it in 2012.
 
 ![Prize in Economic Sciences for it in 2012.](capitulos/Vitor/images/Lloyd_Shapley_2_2012.jpg)
 
@@ -49,12 +49,71 @@ $$
 \end{align}
 $$
 
+## Cooperative Game Theory: Example
+
+Explaining a linear regression model
+
+- Linear regression model on the California housing dataset.
+- 20,640 blocks of houses across California in 1990, where our goal is to predict the natural log of the median home price from 8 different features:
+
+## Cooperative Game Theory: Example
+
+- MedInc - median income in block group
+- HouseAge - median house age in block group
+- AveRooms - average number of rooms per household
+- AveBedrms - average number of bedrooms per household
+- Population - block group population
+- AveOccup - average number of household members
+- Latitude - block group latitude
+- Longitude - block group longitude
+
+## Cooperative Game Theory: Example
+
+- MedInc = 0.45769
+- HouseAge = 0.01153
+- AveRooms = -0.12529
+- AveBedrms = 1.04053
+- Population = 5e-05
+- AveOccup = -0.29795
+- Latitude = -0.41204
+- Longitude = -0.40125
+
+## Cooperative Game Theory: Example 1
+
+![](capitulos/Vitor/images/regression 1.png){fig-align="center"}
+
+## Cooperative Game Theory: Example 1
+
+![](capitulos/Vitor/images/regression 2.png){fig-align="center"}
+
+## Cooperative Game Theory: Example 1
+
+![](capitulos/Vitor/images/regression 3.png){fig-align="center"}
+
+## Cooperative Game Theory: Example 1
+
+
+![](capitulos/Vitor/images/regression 4.png){fig-align="center"}
+
+## Cooperative Game Theory: Example 2
+
+- ImageNet 100 spans 1000 object classes and contains 1,281,167 training images, 50,000 validation images and 100,000 test images.
+- Use ResNEt50 to learn and predict this classes then explain the results using SHAP.
+
+## Cooperative Game Theory: Example 2
+
+![](capitulos/Vitor/images/shap_images.png){fig-align="center"}
+
+## Cooperative Game Theory: Example 2
+
+![](capitulos/Vitor/images/shap_images 2.png){fig-align="center"}
+
 ## Applications: Machine Learning
 
--   Replicating the methodology used in the paper Tang et al. (2020) trying to evaluate the amount of predictbility that a single data point contributes to the power of a Deep Learning Model.
--   The article in question explores a method of quantifying the quality of each data point of the training base of a convolutional neural network (CNN).
+-   Replicating Tang et al. (2020) in evaluating the amount of predictbility that a single data point contributes to the power of a Deep Learning Model.
+-   The article explores `shap` as a method for quantifying the contribution of each data point on the training set of a convolutional neural network.
 -   The neural network trained in the article uses X-ray images of the lung to diagnose pneumonia.
--   One of the main features of the X-ray database used in the article is the misclassification of data points according to the actual diagnosis of the image.
+-   One features of the X-ray dataset is the presence of misclassification of the images.
 
 ::: footer
 [Data valuation for medical imaging using Shapley value and application to a large-scale chest X-ray dataset](https://www.semanticscholar.org/paper/Data-valuation-for-medical-imaging-using-Shapley-to-Tang-Ghorbani/8a4a77347f274b58325ef6c5575611b589d4ba6c), Scientific Paper.
@@ -66,7 +125,7 @@ $$
 -   The experiment iteratively removes the x% best data, and retrains the network to measure the effects of this on the evaluation metrics.
 -   Tang et al. (2020) manages to obtain a causal relationship between shap values and the accuracy of the model, reaching an efficiency of 70% at best.
 
-. . .
+## Applications: Machine Learning
 
 ![](capitulos/Vitor/images/Removendo%20dados%20de%20baixa%20qualidade%20artigo.png)
 
@@ -78,12 +137,15 @@ $$
 
 ## Applications: Machine Learning
 
-### Disclaimer: Don't invest using candlesticks charts.
+\vspace{2em}
+
+Disclaimer: Don't invest using candlesticks charts!!!
+
 
 ## Applications: Machine Learning
 
 -   The training set of the main model contains 700 images, and the test base 300 images.
--   This image corresponds to the price variation per share of 'American Airlines' between the dates of 2008-12-05 and 2009-03-13, each candle corresponds to the price variation in one of the weeks of the period.
+-   The image corresponds to the price variation per share of 'American Airlines' between the dates of 2008-12-05 and 2009-03-13, each candle represents one of the weeks in the period.
 
 . . .
 
