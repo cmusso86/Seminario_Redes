@@ -285,9 +285,9 @@ How get a predicted Good credit risk with probability larger than 50% (against 2
 The three core strengths of deep learning for casual learning are:
 
 ::: {.nonincremental}
-1. Causal explanations beyond RCTs;
-2. Strong representational and learning capabilities; and
-3. The ability to [approximate data generation mechanisms]{style="color:Violet"}.
+- **1** Causal explanations beyond RCTs;
+- **2** Strong representational and learning capabilities; and
+- **3** The ability to [approximate data generation mechanisms]{style="color:Violet"}.
 :::
 
 

@@ -6,29 +6,31 @@ title: "Variable importance"
 
 ## Cooperative Game Theory
 
-- The Shapley value is a solution concept in cooperative game theory. 
-- It was named in honor of Lloyd Shapley, who introduced it in 1951 and won the Nobel Memorial Prize in Economic Sciences for it in 2012.
-![](capitulos/Vitor/images/Lloyd_Shapley_2_2012.jpg)
+-   The Shapley value is a solution concept in cooperative game theory.
+-   It was named in honor of Lloyd Shapley, who introduced it in 1951 and won the Nobel Memorial . . .
 
-
-## Cooperative Game Theory
-
-- Players cooperate in a coalition and receive a certain profit from this cooperation.
-- Some players may contribute more to the coalition than others.
-- How important is each player to the overall cooperation, and what payoff can he or she reasonably expect?
-- Shapley value is a method for assigning payoffs to players depending on their contribution in the total payoff. 
+![Prize in Economic Sciences for it in 2012.](capitulos/Vitor/images/Lloyd_Shapley_2_2012.jpg)
 
 ## Cooperative Game Theory
 
-- It is contextualized in a cooperative game with $N$ agents in a **coalition**. Each agent has only two choices, cooperate or not cooperate. Therefore the number of possible coalitions is $2^{N}$.
-
-- The coalition is a subset of the set of agents $N$ and is represented by $S$. The set of all possible coalitions is represented by $\mathcal{P}(N) \Rightarrow S \in \mathcal{P}(N)$.
-
-- The function $v: S \rightarrow \mathbb{R}$, assigns to the coalition $S$ a value that corresponds to the sum of the expected payoffs that the members of the coalition can obtain.
+-   Players cooperate in a coalition and receive a certain profit from this cooperation.
+-   Some players may contribute more to the coalition than others.
+-   How important is each player to the overall cooperation, and what payoff can he or she reasonably expect?
+-   Shapley value is a method for assigning payoffs to players depending on their contribution in the total payoff.
 
 ## Cooperative Game Theory
 
-- The function $\varphi_{i}(v)$ returns a 'fair' proportion of distributing the coalition payoff according to the individual contribution of each agent. This function is defined as follows:
+-   It is contextualized in a cooperative game with $N$ agents in a **coalition**. Each agent has only two choices, cooperate or not cooperate. Therefore the number of possible coalitions is $2^{N}$.
+
+-   The coalition is a subset of the set of agents $N$ and is represented by $S$. The set of all possible coalitions is represented by $\mathcal{P}(N) \Rightarrow S \in \mathcal{P}(N)$.
+
+-   The function $v: S \rightarrow \mathbb{R}$, assigns to the coalition $S$ a value that corresponds to the sum of the expected payoffs that the members of the coalition can obtain.
+
+## Cooperative Game Theory
+
+-   The function $\varphi_{i}(v)$ returns a 'fair' proportion of distributing the coalition payoff according to the individual contribution of each agent. This function is defined as follows:
+
+. . .
 
 $$
 \varphi_{i}(v) = \frac{1}{n} \sum_{S \subseteq N / \{i\}} \binom{n-1}{|S|}^{-1}  (v(S \cup \{ i \}) - v(S))
@@ -36,7 +38,9 @@ $$
 
 ## Cooperative Game Theory
 
-- One way to interpret what is being explained in the formula is that the Shapley value of an agent is the average marginal contribution of the agent to all possible coalitions.:
+-   One way to interpret what is being explained in the formula is that the Shapley value of an agent is the average marginal contribution of the agent to all possible coalitions.:
+
+. . .
 
 $$
 \begin{align}
@@ -45,14 +49,12 @@ $$
 \end{align}
 $$
 
-
-
 ## Applications: Machine Learning
 
-- Replicating the methodology used in the paper Tang et al. (2020) trying to evaluate the amount of predictbility that a single data point contributes to the power of a Deep Learning Model.
-- The article in question explores a method of quantifying the quality of each data point of the training base of a convolutional neural network (CNN). 
-- The neural network trained in the article uses X-ray images of the lung to diagnose pneumonia.
-- One of the main features of the X-ray database used in the article is the misclassification of data points according to the actual diagnosis of the image. 
+-   Replicating the methodology used in the paper Tang et al. (2020) trying to evaluate the amount of predictbility that a single data point contributes to the power of a Deep Learning Model.
+-   The article in question explores a method of quantifying the quality of each data point of the training base of a convolutional neural network (CNN).
+-   The neural network trained in the article uses X-ray images of the lung to diagnose pneumonia.
+-   One of the main features of the X-ray database used in the article is the misclassification of data points according to the actual diagnosis of the image.
 
 ::: footer
 [Data valuation for medical imaging using Shapley value and application to a large-scale chest X-ray dataset](https://www.semanticscholar.org/paper/Data-valuation-for-medical-imaging-using-Shapley-to-Tang-Ghorbani/8a4a77347f274b58325ef6c5575611b589d4ba6c), Scientific Paper.
@@ -60,9 +62,19 @@ $$
 
 ## Applications: Machine Learning
 
-- Our application: Images of a section of the Candlesticks chart, from different time scales, were used for S&P500 assets. 
-- The purpose of the network is to classify these images according to the price variation 5 periods after the observed pattern, the classes are 'buy' and 'sell'. 
-- The image pixels will collaborate with the classification of the image, and the Shapley values will be used to measure the importance of each pixel in the classification.
+-   Pixels of the same image were summed, resulting in a single value for each image.
+-   The experiment iteratively removes the x% best data, and retrains the network to measure the effects of this on the evaluation metrics.
+-   Tang et al. (2020) manages to obtain a causal relationship between shap values and the accuracy of the model, reaching an efficiency of 70% at best.
+
+. . .
+
+![](capitulos/Vitor/images/Removendo%20dados%20de%20baixa%20qualidade%20artigo.png)
+
+## Applications: Machine Learning
+
+-   Our application: Images of a section of the Candlesticks chart, from different time scales, were used for S&P500 assets.
+-   The purpose of the network is to classify these images according to the price variation 5 periods after the observed pattern, the classes are 'buy' and 'sell'.
+-   The image pixels will collaborate with the classification of the image, and the Shapley values will be used to measure the importance of each pixel in the classification.
 
 ## Applications: Machine Learning
 
@@ -70,41 +82,34 @@ $$
 
 ## Applications: Machine Learning
 
-- The training set of the main model contains 700 images, and the test base 300 images.
-- This image corresponds to the price variation per share of 'American Airlines' between the dates of 2008-12-05 and 2009-03-13, each candle corresponds to the price variation in one of the weeks of the period.
+-   The training set of the main model contains 700 images, and the test base 300 images.
+-   This image corresponds to the price variation per share of 'American Airlines' between the dates of 2008-12-05 and 2009-03-13, each candle corresponds to the price variation in one of the weeks of the period.
 
-![](capitulos/Vitor/images/AAL_weekly_from_2008-12-05_to_2009-03-13.png)
+. . .
 
-## Applications: Machine Learning
-
-- Using the `shap` library from Python, the Shapley values were calculated for each pixel in every image in the training set.
-- Pixels of the same image were summed, resulting in a single value for each image.
-- The experiment iteratively removes the x% best data, and retrains the network to measure the effects of this on the evaluation metrics.
-
-![](capitulos/Vitor/images/Removendo dados de alta qualidade.png)
+![](capitulos/Vitor/images/AAL_weekly_from_2008-12-05_to_2009-03-13.png){fig-align="center"}
 
 ## Applications: Machine Learning
 
-- Results of removing the x% worst data from the training set.
+-   Using the `shap` library from Python, the Shapley values were calculated for each pixel in every image in the training set.
 
-![](capitulos/Vitor/images/Removendo dados de baixa qualidade.png)
+. . .
 
-## Applications: Machine Learning
-
-![](capitulos/Vitor/images/Resultado regressões.png)
-
+![](capitulos/Vitor/images/Removendo%20dados%20de%20alta%20qualidade.png)
 
 ## Applications: Machine Learning
 
-- Tang et al. (2020) manages to obtain a causal relationship between shap values and the accuracy of the model, reaching an efficiency of 70% at best.
+-   Results of removing the x% worst data from the training set.
 
-![](capitulos/Vitor/images/Removendo dados de baixa qualidade artigo.png)
+. . .
+
+![](capitulos/Vitor/images/Removendo%20dados%20de%20baixa%20qualidade.png){width="1560"}
 
 ## Applications: Machine Learning
 
-- This is because the low-shapley medical data, which probably had classification problems, were removed from the training base and the network was able to learn only the true features of the well-classified images.
-- A characteristic of the data that was used in the empirical exercise is the absence of classification errors.
+![](capitulos/Vitor/images/Resultado%20regressões.png){fig-align="center"}
 
+## Applications: Machine Learning
 
-
-
+-   This is because the low-shapley medical data, which probably had classification problems, were removed from the training base and the network was able to learn only the true features of the well-classified images.
+-   A characteristic of the data that was used in the empirical exercise is the absence of classification errors.

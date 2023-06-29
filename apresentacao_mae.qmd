@@ -44,7 +44,10 @@ editor: visual
 
 <h1 style="text-align: center">
 
-The end!
+<<<<<<< HEAD
+=======
+Thank you!!!
+>>>>>>> 09ef6d1a7b7f7c24feaeee0ea167f57985b39714
 
 </h1>
 
