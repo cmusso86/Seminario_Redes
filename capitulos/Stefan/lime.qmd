@@ -134,7 +134,15 @@ knitr::include_graphics("capitulos/Stefan/Imagens/Imagem8.png")
 
 ## Obtaining the interpretable model
 
-Insert formulas here, but dont spend much time explaining them
+```{r echo=F, out.width="60%", fig.align='center'}
+knitr::include_graphics("capitulos/Stefan/Imagens/Imagem9.png")
+```
+
+$L(f,g,π_x)$ is a loss function, usually MSE, between the prediction of the ML model and the prediction of the simplified model
+
+$\pi_x(z)$ is a function that weights the new instances according to their distance to the original instance
+
+$\Omega(g)$ penalizes high complexity models
 
 ## Aplications
 
@@ -142,17 +150,80 @@ Insert formulas here, but dont spend much time explaining them
 
     1.  Values usually sampled from a normal distribution for each variable
 
-2.  Text data
+2.  Text or Image data
 
-    1.  Words turned on or off according to a bernoulli distribution
+    1.  Words or mega-pixels turned on or off according to a bernoulli distribution
 
-3.  Image data
-
-    1.  Mega-pixels turned on or off according to a bernoulli distribution
+Can be used for classification or regression models
 
 ## Aplications in R
 
-Used for classification and regression models
+```{r echo=F, message=FALSE}
+# Loading necessary packages
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load("lime","MASS", "randomForest", "caret", "e1071")
+#Organizing the data
+biopsy$ID <- NULL
+names(biopsy) <- c('clump thickness', 'uniformity cell size',
+'uniformity cell shape', 'marginal adhesion','single epithelial cell size',
+'bare nuclei', 'bland chromatin', 'normal nucleoli', 'mitoses','class')
+biopsy <- na.omit(biopsy)
+```
+
+We shall analyse the "Biopsy" database, which is part of the "MASS" package
+
+```{r echo=F, out.width="40%", fig.align='center'}
+knitr::include_graphics("capitulos/Stefan/Imagens/Imagem10.png")
+```
+
+::: footer
+\"LIME \| Machine Learning Model Interpretability Using LIME in R.\" *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
+:::
+
+## Aplications in R
+
+```{r message=FALSE, warning=FALSE}
+## 75% of the sample size
+
+smp_size <- floor(0.75 * nrow(biopsy))
+
+## set the seed
+set.seed(123)
+train_ind <- sample(seq_len(nrow(biopsy)), size = smp_size)
+
+train_biopsy <- biopsy[train_ind, ]
+test_biopsy <- biopsy[-train_ind, ]
+
+model_rf <- caret::train(class ~ ., data = train_biopsy,method = "rf", #random forest
+trControl = trainControl(method = "repeatedcv", number = 10,repeats = 5, verboseIter = FALSE))
+```
+
+::: footer
+\"LIME \| Machine Learning Model Interpretability Using LIME in R.\" *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
+:::
+
+## Aplications in R
+
+```{r warning=FALSE}
+model_rf
+```
+
+::: footer
+\"LIME \| Machine Learning Model Interpretability Using LIME in R.\" *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
+:::
+
+## Aplications in R
+
+```{r warning=FALSE}
+biopsy_rf_pred <- predict(model_rf, test_biopsy)
+explainer <- lime(train_biopsy, model_rf)
+explanation1 <- explain(test_biopsy[93, ], explainer, n_labels = 1, n_features = 9)
+plot_features(explanation1)
+```
+
+::: footer
+\"LIME \| Machine Learning Model Interpretability Using LIME in R.\" *Analytics Vidhya*, 18 Jan. 2021, www.analyticsvidhya.com/blog/2021/01/ml-interpretability-using-lime-in-r/.
+:::
 
 ## Limitations
 
