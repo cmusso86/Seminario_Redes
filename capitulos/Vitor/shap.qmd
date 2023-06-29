@@ -9,7 +9,7 @@ title: "Variable importance"
 -   The Shapley value is a solution concept in cooperative game theory.
 -   It was named in honor of Lloyd Shapley, who introduced it in 1951 and won the Nobel Memorial Prize in Economic Sciences for it in 2012.
 
-![Prize in Economic Sciences for it in 2012.](capitulos/Vitor/images/Lloyd_Shapley_2_2012.jpg)
+![Lloyd Shapley](capitulos/Vitor/images/Lloyd_Shapley_2_2012.jpg)
 
 ## Cooperative Game Theory
 
@@ -38,7 +38,7 @@ $$
 
 ## Cooperative Game Theory
 
--   One way to interpret what is being explained in the formula is that the Shapley value of an agent is the average marginal contribution of the agent to all possible coalitions.:
+-   One way to interpret what is being explained in the formula is that the Shapley value of an agent is the average marginal contribution of the agent to all possible coalitions:
 
 . . .
 
@@ -49,14 +49,14 @@ $$
 \end{align}
 $$
 
-## Cooperative Game Theory: Example
+## Cooperative Game Theory: Example 1
 
-Explaining a linear regression model
+- Explaining a linear regression model
 
 - Linear regression model on the California housing dataset.
 - 20,640 blocks of houses across California in 1990, where our goal is to predict the natural log of the median home price from 8 different features:
 
-## Cooperative Game Theory: Example
+## Cooperative Game Theory: Example 1
 
 - MedInc - median income in block group
 - HouseAge - median house age in block group
@@ -67,7 +67,7 @@ Explaining a linear regression model
 - Latitude - block group latitude
 - Longitude - block group longitude
 
-## Cooperative Game Theory: Example
+## Cooperative Game Theory: Example 1
 
 - MedInc = 0.45769
 - HouseAge = 0.01153
@@ -92,12 +92,11 @@ Explaining a linear regression model
 
 ## Cooperative Game Theory: Example 1
 
-
 ![](capitulos/Vitor/images/regression 4.png){fig-align="center"}
 
 ## Cooperative Game Theory: Example 2
 
-- ImageNet 100 spans 1000 object classes and contains 1,281,167 training images, 50,000 validation images and 100,000 test images.
+- ImageNet 1000 spans 1000 object classes and contains 1,281,167 training images, 50,000 validation images and 100,000 test images.
 - Use ResNEt50 to learn and predict this classes then explain the results using SHAP.
 
 ## Cooperative Game Theory: Example 2
