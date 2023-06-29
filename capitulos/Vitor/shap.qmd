@@ -60,6 +60,14 @@ $$
 
 ## Applications: Machine Learning
 
+- Pixels of the same image were summed, resulting in a single value for each image.
+- The experiment iteratively removes the x% best data, and retrains the network to measure the effects of this on the evaluation metrics.
+- Tang et al. (2020) manages to obtain a causal relationship between shap values and the accuracy of the model, reaching an efficiency of 70% at best.
+
+![](capitulos/Vitor/images/Removendo dados de baixa qualidade artigo.png)
+
+## Applications: Machine Learning
+
 - Our application: Images of a section of the Candlesticks chart, from different time scales, were used for S&P500 assets. 
 - The purpose of the network is to classify these images according to the price variation 5 periods after the observed pattern, the classes are 'buy' and 'sell'. 
 - The image pixels will collaborate with the classification of the image, and the Shapley values will be used to measure the importance of each pixel in the classification.
@@ -78,8 +86,6 @@ $$
 ## Applications: Machine Learning
 
 - Using the `shap` library from Python, the Shapley values were calculated for each pixel in every image in the training set.
-- Pixels of the same image were summed, resulting in a single value for each image.
-- The experiment iteratively removes the x% best data, and retrains the network to measure the effects of this on the evaluation metrics.
 
 ![](capitulos/Vitor/images/Removendo dados de alta qualidade.png)
 
@@ -93,12 +99,6 @@ $$
 
 ![](capitulos/Vitor/images/Resultado regressões.png)
 
-
-## Applications: Machine Learning
-
-- Tang et al. (2020) manages to obtain a causal relationship between shap values and the accuracy of the model, reaching an efficiency of 70% at best.
-
-![](capitulos/Vitor/images/Removendo dados de baixa qualidade artigo.png)
 
 ## Applications: Machine Learning
 
